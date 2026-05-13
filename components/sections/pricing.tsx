@@ -180,13 +180,15 @@ export function Pricing() {
                 )}
 
                 <div className="mt-6">
-                  {plan.popular ? (
-                    <ShimmerButton className="w-full justify-center">{plan.cta}</ShimmerButton>
-                  ) : (
-                    <Button variant="ghost" size="lg" className="w-full justify-center">
-                      {plan.cta}
-                    </Button>
-                  )}
+                  <a href="https://wa.link/9vgb2z" target="_blank" rel="noopener noreferrer" className="block w-full">
+                    {plan.popular ? (
+                      <ShimmerButton className="w-full justify-center">{plan.cta}</ShimmerButton>
+                    ) : (
+                      <Button variant="ghost" size="lg" className="w-full justify-center">
+                        {plan.cta}
+                      </Button>
+                    )}
+                  </a>
                 </div>
 
                 <ul className="mt-7 space-y-3">

@@ -117,9 +117,11 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:items-center"
             >
-              <ShimmerButton>
-                Solicitar demo gratis <ArrowRight className="h-4 w-4" />
-              </ShimmerButton>
+              <a href="https://wa.link/9vgb2z" target="_blank" rel="noopener noreferrer">
+                <ShimmerButton>
+                  Solicitar demo gratis <ArrowRight className="h-4 w-4" />
+                </ShimmerButton>
+              </a>
               <a
                 href="/demo"
                 className="group inline-flex h-12 items-center gap-2 rounded-full border border-border bg-card/50 px-6 text-sm font-medium text-foreground backdrop-blur transition-colors hover:border-indigo-400/50 hover:text-indigo-500 dark:hover:text-indigo-400"
@@ -166,6 +168,19 @@ export function Hero() {
               aria-hidden
               className="absolute inset-x-6 -bottom-10 h-44 rounded-full bg-indigo-400/20 blur-[110px] dark:bg-indigo-400/30"
             />
+            {/* Friendly Students Illustration */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, x: -20, y: 20 }}
+              animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="absolute -bottom-16 -left-20 z-20 w-64 md:w-72 pointer-events-none drop-shadow-2xl"
+            >
+              <img 
+                src="/students-illustration.png" 
+                alt="Estudiantes emocionados viendo Klassia" 
+                className="w-full h-auto"
+              />
+            </motion.div>
             <div
               aria-hidden
               className="absolute -inset-10 -z-10 bg-gradient-radial from-indigo-300/15 via-transparent to-transparent blur-2xl"

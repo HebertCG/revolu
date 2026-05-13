@@ -20,6 +20,12 @@ export function CTAFinal() {
             className="absolute -top-20 left-1/2 -z-10 h-72 w-[120%] -translate-x-1/2 rounded-full bg-indigo-400/20 blur-[100px] dark:bg-indigo-500/30"
           />
           <Sparkles count={28} className="opacity-60 dark:opacity-100" />
+          
+          <img 
+            src="/students-illustration.png" 
+            alt="Estudiantes emocionados viendo Klassia" 
+            className="absolute -top-12 -right-8 z-20 w-48 md:w-56 pointer-events-none drop-shadow-2xl opacity-90 rotate-12"
+          />
 
           <div className="relative mx-auto max-w-3xl px-6 py-20 text-center sm:px-12 sm:py-24">
             <motion.div
@@ -63,9 +69,11 @@ export function CTAFinal() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="mt-10 flex flex-col items-center gap-3 sm:flex-row sm:justify-center"
             >
-              <ShimmerButton className="h-14 px-8 text-base">
-                Solicitar demo gratuita <ArrowRight className="h-4 w-4" />
-              </ShimmerButton>
+              <a href="https://wa.link/9vgb2z" target="_blank" rel="noopener noreferrer">
+                <ShimmerButton className="h-14 px-8 text-base">
+                  Solicitar demo gratuita <ArrowRight className="h-4 w-4" />
+                </ShimmerButton>
+              </a>
               <a
                 href="#precios"
                 className="inline-flex h-14 items-center gap-2 rounded-full border border-border bg-background/60 px-7 text-sm font-medium text-foreground backdrop-blur transition-colors hover:border-indigo-400/50 hover:text-indigo-600 dark:hover:text-indigo-400"
