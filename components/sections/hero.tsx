@@ -37,7 +37,7 @@ export function Hero() {
   const glareX = useSpring(35, SPRING);
   const glareY = useSpring(20, SPRING);
 
-  const glareBackground = useMotionTemplate`radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255, 245, 200, 0.28), transparent 55%)`;
+  const glareBackground = useMotionTemplate`radial-gradient(circle at ${glareX}% ${glareY}%, rgba(200, 210, 255, 0.25), transparent 55%)`;
 
   function handleMouseMove(e: ReactMouseEvent<HTMLDivElement>) {
     if (reduce) return;
@@ -67,7 +67,7 @@ export function Hero() {
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" />
       <Spotlight
         className="left-full top-10 h-[80vh] w-[50vw] md:left-[55%]"
-        fill="#fde68a"
+        fill="#c7d2fe"
       />
 
       <div
@@ -76,7 +76,7 @@ export function Hero() {
       />
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-gradient-to-br from-amber-400/[0.06] via-transparent to-yellow-400/[0.06] dark:from-amber-400/[0.08] dark:to-yellow-500/[0.08]"
+        className="absolute inset-0 -z-10 bg-gradient-to-br from-indigo-400/[0.06] via-transparent to-emerald-400/[0.06] dark:from-indigo-400/[0.08] dark:to-sky-400/[0.06]"
       />
 
       <div className="relative mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8">
@@ -87,15 +87,15 @@ export function Hero() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/5 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-amber-700 dark:text-amber-300"
+              className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-400/8 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-indigo-700 dark:text-indigo-300"
             >
               <Sparkles className="h-3 w-3" />
-              EdTech · Norte del Perú · 2026
+              Plataforma Educativa · Norte del Perú · 2026
             </motion.div>
 
             <TextGenerateEffect
-              words="La intranet que las academias del 2030 ya están usando."
-              highlight={["2030"]}
+              words="La plataforma que convierte tu academia en una institución de élite."
+              highlight={["élite"]}
               className="mt-6 text-balance text-left text-4xl leading-[1.05] sm:text-5xl md:text-6xl lg:text-[3.75rem] xl:text-[4.5rem]"
             />
 
@@ -105,10 +105,10 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
               className="mt-6 max-w-xl text-balance text-base leading-relaxed text-muted-foreground sm:text-lg"
             >
-              Gestión académica,{" "}
-              <span className="font-medium text-foreground">proctoring con IA</span>,
-              test vocacional ML y simulacros UDEP/UPAO infinitos. Todo en una sola
-              plataforma.
+              Olvida el WhatsApp para tareas y el Excel para asistencia.{" "}
+              <span className="font-medium text-foreground">Klassia</span> centraliza
+              gestión académica, proctoring con IA, test vocacional ML y simulacros
+              UDEP/UPAO ilimitados en un solo lugar.
             </motion.p>
 
             <motion.div
@@ -118,13 +118,13 @@ export function Hero() {
               className="mt-9 flex flex-col items-start gap-3 sm:flex-row sm:items-center"
             >
               <ShimmerButton>
-                Pedir demo gratis <ArrowRight className="h-4 w-4" />
+                Solicitar demo gratis <ArrowRight className="h-4 w-4" />
               </ShimmerButton>
               <a
                 href="/demo"
-                className="group inline-flex h-12 items-center gap-2 rounded-full border border-border bg-card/50 px-6 text-sm font-medium text-foreground backdrop-blur transition-colors hover:border-amber-400/50 hover:text-amber-500"
+                className="group inline-flex h-12 items-center gap-2 rounded-full border border-border bg-card/50 px-6 text-sm font-medium text-foreground backdrop-blur transition-colors hover:border-indigo-400/50 hover:text-indigo-500 dark:hover:text-indigo-400"
               >
-                <PlayCircle className="h-4 w-4 text-amber-500 transition-transform group-hover:scale-110" />
+                <PlayCircle className="h-4 w-4 text-indigo-500 transition-transform group-hover:scale-110" />
                 Ver demo en vivo
               </a>
             </motion.div>
@@ -136,17 +136,17 @@ export function Hero() {
               className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground"
             >
               <span className="inline-flex items-center gap-1.5">
-                <Zap className="h-3.5 w-3.5 text-amber-500" /> Multi-tenant
+                <Zap className="h-3.5 w-3.5 text-indigo-500" /> Multi-tenant
               </span>
               <span className="hidden h-3 w-px bg-border sm:inline-block" />
               <span className="inline-flex items-center gap-1.5">
-                <Activity className="h-3.5 w-3.5 text-amber-500" /> 12 módulos
+                <Activity className="h-3.5 w-3.5 text-indigo-500" /> 14 módulos
               </span>
               <span className="hidden h-3 w-px bg-border sm:inline-block" />
               <span className="inline-flex items-center gap-1.5">&lt;2ms latencia</span>
               <span className="hidden h-3 w-px bg-border sm:inline-block" />
               <span className="inline-flex items-center gap-1.5">
-                <Shield className="h-3.5 w-3.5 text-amber-500" /> 99.9% uptime
+                <Shield className="h-3.5 w-3.5 text-indigo-500" /> 99.9% uptime
               </span>
             </motion.div>
           </div>
@@ -164,11 +164,11 @@ export function Hero() {
             {/* Ambient glow behind */}
             <div
               aria-hidden
-              className="absolute inset-x-6 -bottom-10 h-44 rounded-full bg-amber-400/30 blur-[110px] dark:bg-amber-400/40"
+              className="absolute inset-x-6 -bottom-10 h-44 rounded-full bg-indigo-400/20 blur-[110px] dark:bg-indigo-400/30"
             />
             <div
               aria-hidden
-              className="absolute -inset-10 -z-10 bg-gradient-radial from-amber-300/20 via-transparent to-transparent blur-2xl"
+              className="absolute -inset-10 -z-10 bg-gradient-radial from-indigo-300/15 via-transparent to-transparent blur-2xl"
             />
 
             {/* The tilted card */}

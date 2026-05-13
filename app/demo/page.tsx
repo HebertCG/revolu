@@ -27,19 +27,19 @@ export default function DemoDashboard() {
     <div className="mx-auto max-w-7xl">
       {/* Header card with greeting + stats + Próxima clase */}
       <section className="grid gap-4 lg:grid-cols-3">
-        <div className="relative overflow-hidden rounded-3xl border border-amber-300/40 bg-gradient-to-br from-amber-50 via-amber-50/50 to-yellow-50/40 p-6 dark:border-amber-400/20 dark:from-amber-400/[0.06] dark:via-amber-400/[0.02] dark:to-yellow-400/[0.04] sm:p-8 lg:col-span-2">
+        <div className="relative overflow-hidden rounded-3xl border border-indigo-300/40 bg-gradient-to-br from-indigo-50 via-indigo-50/50 to-sky-50/40 p-6 dark:border-indigo-400/20 dark:from-indigo-400/[0.06] dark:via-indigo-400/[0.02] dark:to-sky-400/[0.04] sm:p-8 lg:col-span-2">
           <div
             aria-hidden
-            className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-amber-300/30 blur-3xl dark:bg-amber-400/20"
+            className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-indigo-300/30 blur-3xl dark:bg-indigo-400/20"
           />
-          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-400">
+          <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">
             <Sparkles className="h-3 w-3" />
             {demoUser.greetingTime}
             <span aria-hidden>👋</span>
           </p>
           <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
             Hola,{" "}
-            <span className="gradient-text-gold">{demoUser.shortName}</span>
+            <span className="gradient-text-primary">{demoUser.shortName}</span>
           </h1>
           <div className="mt-3 inline-flex items-center gap-1.5 rounded-md border border-border bg-background/60 px-2.5 py-1 text-xs text-muted-foreground">
             <Calendar className="h-3 w-3" />
@@ -52,7 +52,7 @@ export default function DemoDashboard() {
               label="Cursos"
               value={demoCourses.length.toString()}
               icon={BookOpen}
-              tone="amber"
+              tone="indigo"
             />
             <StatCard
               label="Hoy"
@@ -71,32 +71,32 @@ export default function DemoDashboard() {
         </div>
 
         {/* Próxima clase */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-500 via-amber-500 to-amber-600 p-6 text-amber-50 shadow-[0_12px_40px_-12px_rgb(245_158_11/0.5)] sm:p-8">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-500 via-indigo-500 to-indigo-600 p-6 text-indigo-50 shadow-[0_12px_40px_-12px_rgb(99_102_241/0.5)] sm:p-8">
           <div
             aria-hidden
-            className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-yellow-300/30 blur-2xl"
+            className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-sky-300/30 blur-2xl"
           />
           <div
             aria-hidden
             className="absolute inset-0 bg-grid-small opacity-10"
           />
-          <p className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-amber-100">
+          <p className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-indigo-100">
             <Sparkles className="h-3 w-3" />
             Próxima clase
           </p>
           <h2 className="mt-3 text-2xl font-semibold leading-tight text-white">
             {demoNextClass.course.name}
           </h2>
-          <p className="mt-1 text-sm text-amber-50/80">
+          <p className="mt-1 text-sm text-indigo-50/80">
             con {demoNextClass.course.professor} · {demoNextClass.course.cycle}
           </p>
-          <div className="mt-5 inline-flex items-center gap-2 rounded-lg bg-amber-950/30 px-3 py-2 text-sm font-medium text-amber-50 ring-1 ring-amber-100/20">
+          <div className="mt-5 inline-flex items-center gap-2 rounded-lg bg-indigo-950/30 px-3 py-2 text-sm font-medium text-indigo-50 ring-1 ring-indigo-100/20">
             <Clock className="h-4 w-4" />
             {demoNextClass.startLabel} — {demoNextClass.endLabel}
           </div>
           <Link
             href="/demo/materiales"
-            className="mt-6 inline-flex items-center gap-1.5 rounded-lg bg-amber-50 px-3 py-2 text-xs font-semibold text-amber-900 transition-transform hover:scale-[1.02]"
+            className="mt-6 inline-flex items-center gap-1.5 rounded-lg bg-indigo-50 px-3 py-2 text-xs font-semibold text-indigo-900 transition-transform hover:scale-[1.02]"
           >
             Ir a materiales
             <ArrowRight className="h-3.5 w-3.5" />
@@ -116,7 +116,7 @@ export default function DemoDashboard() {
             </div>
             <Link
               href="/demo/horario"
-              className="inline-flex items-center gap-1 text-xs font-medium text-amber-600 hover:underline dark:text-amber-400"
+              className="inline-flex items-center gap-1 text-xs font-medium text-indigo-600 hover:underline dark:text-indigo-400"
             >
               Ver horario
               <ArrowRight className="h-3 w-3" />
@@ -129,7 +129,7 @@ export default function DemoDashboard() {
               return (
                 <article
                   key={c.id}
-                  className="group relative overflow-hidden rounded-2xl border border-border bg-background p-4 transition-all hover:-translate-y-0.5 hover:border-amber-400/50 hover:shadow-[0_12px_30px_-12px_rgb(245_158_11/0.35)]"
+                  className="group relative overflow-hidden rounded-2xl border border-border bg-background p-4 transition-all hover:-translate-y-0.5 hover:border-indigo-400/50 hover:shadow-[0_12px_30px_-12px_rgb(99_102_241/0.35)]"
                 >
                   <span
                     aria-hidden
@@ -137,7 +137,7 @@ export default function DemoDashboard() {
                   />
                   <div className="flex items-start justify-between gap-2">
                     <div
-                      className={`grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br ${accent.bg} text-amber-950 shadow-[0_4px_18px_-4px_rgb(245_158_11/0.4)]`}
+                      className={`grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br ${accent.bg} text-white shadow-[0_4px_18px_-4px_rgb(99_102_241/0.4)]`}
                     >
                       <BookOpen className="h-4 w-4" />
                     </div>
@@ -152,7 +152,7 @@ export default function DemoDashboard() {
                   </h4>
                   <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
                     <div className="flex items-center gap-1.5">
-                      <span
+                       <span
                         className={`grid h-6 w-6 place-items-center rounded-full text-[10px] font-bold ${accent.chip}`}
                       >
                         {c.professorInitials}
@@ -161,7 +161,7 @@ export default function DemoDashboard() {
                         {c.professor}
                       </span>
                     </div>
-                    <span className="text-[11px] font-medium text-amber-600 dark:text-amber-400">
+                    <span className="text-[11px] font-medium text-indigo-600 dark:text-indigo-400">
                       Ver →
                     </span>
                   </div>
@@ -176,14 +176,14 @@ export default function DemoDashboard() {
           <div className="rounded-3xl border border-border bg-card p-5">
             <header className="mb-3 flex items-center justify-between">
               <h3 className="inline-flex items-center gap-2 text-sm font-semibold">
-                <Calendar className="h-4 w-4 text-amber-500" />
+                <Calendar className="h-4 w-4 text-indigo-500" />
                 Clases de hoy
               </h3>
-              <span className="rounded-full bg-amber-400/15 px-2 py-0.5 text-[10px] font-bold text-amber-700 dark:text-amber-300">
+              <span className="rounded-full bg-indigo-400/15 px-2 py-0.5 text-[10px] font-bold text-indigo-700 dark:text-indigo-300">
                 1
               </span>
             </header>
-            <div className="rounded-xl border border-amber-300/40 bg-amber-50/50 p-3 dark:border-amber-400/20 dark:bg-amber-400/[0.04]">
+            <div className="rounded-xl border border-indigo-300/40 bg-indigo-50/50 p-3 dark:border-indigo-400/20 dark:bg-indigo-400/[0.04]">
               <div className="flex items-baseline justify-between">
                 <span className="text-lg font-semibold tracking-tight">
                   {demoNextClass.startLabel}
@@ -195,7 +195,7 @@ export default function DemoDashboard() {
               <p className="text-[10px] text-muted-foreground">
                 — {demoNextClass.endLabel}
               </p>
-              <div className="mt-3 border-t border-amber-300/30 pt-2 dark:border-amber-400/15">
+              <div className="mt-3 border-t border-indigo-300/30 pt-2 dark:border-indigo-400/15">
                 <p className="text-xs font-medium text-card-foreground">
                   {demoNextClass.course.name}
                 </p>
@@ -206,7 +206,7 @@ export default function DemoDashboard() {
             </div>
             <Link
               href="/demo/horario"
-              className="mt-3 block w-full rounded-lg border border-border bg-background py-2 text-center text-[10px] font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:border-amber-400/40 hover:text-amber-600 dark:hover:text-amber-300"
+              className="mt-3 block w-full rounded-lg border border-border bg-background py-2 text-center text-[10px] font-semibold uppercase tracking-wider text-muted-foreground transition-colors hover:border-indigo-400/40 hover:text-indigo-600 dark:hover:text-indigo-300"
             >
               Ver horario completo
             </Link>
@@ -216,18 +216,18 @@ export default function DemoDashboard() {
           <div className="rounded-3xl border border-border bg-card p-5">
             <header className="mb-3 flex items-center justify-between">
               <h3 className="inline-flex items-center gap-2 text-sm font-semibold">
-                <PieChart className="h-4 w-4 text-amber-500" />
+                <PieChart className="h-4 w-4 text-emerald-500" />
                 Asistencia global
               </h3>
               <Link
                 href="/demo/asistencia"
-                className="text-[11px] font-medium text-amber-600 hover:underline dark:text-amber-400"
+                className="text-[11px] font-medium text-indigo-600 hover:underline dark:text-indigo-400"
               >
                 Detalle →
               </Link>
             </header>
             <div className="flex items-baseline gap-2">
-              <span className="text-4xl font-semibold tabular-nums gradient-text-gold">
+              <span className="text-4xl font-semibold tabular-nums gradient-text-primary">
                 {demoAttendanceStats.percentage}%
               </span>
               <span className="text-xs text-muted-foreground">
@@ -236,7 +236,7 @@ export default function DemoDashboard() {
             </div>
             <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-muted">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-amber-400 to-amber-600 transition-all"
+                className="h-full rounded-full bg-gradient-to-r from-emerald-400 to-indigo-500 transition-all"
                 style={{ width: `${demoAttendanceStats.percentage}%` }}
               />
             </div>
@@ -251,12 +251,12 @@ export default function DemoDashboard() {
           <div className="rounded-3xl border border-border bg-card p-5">
             <header className="mb-3 flex items-center justify-between">
               <h3 className="inline-flex items-center gap-2 text-sm font-semibold">
-                <ClipboardList className="h-4 w-4 text-amber-500" />
+                <ClipboardList className="h-4 w-4 text-indigo-500" />
                 Últimos registros
               </h3>
               <Link
                 href="/demo/asistencia"
-                className="text-[11px] font-medium text-amber-600 hover:underline dark:text-amber-400"
+                className="text-[11px] font-medium text-indigo-600 hover:underline dark:text-indigo-400"
               >
                 Ver todo →
               </Link>
@@ -286,8 +286,8 @@ export default function DemoDashboard() {
           <div className="rounded-2xl border border-dashed border-border bg-background px-4 py-3 text-[11px] text-muted-foreground">
             <p className="font-medium text-foreground">{demoAcademy.name}</p>
             <p className="mt-0.5 truncate">{demoAcademy.domain}</p>
-            <p className="mt-1 inline-flex items-center gap-1 text-amber-600 dark:text-amber-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse-gold" />
+            <p className="mt-1 inline-flex items-center gap-1 text-indigo-600 dark:text-indigo-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse-primary" />
               {demoAcademy.ciclo}
             </p>
           </div>
@@ -307,14 +307,14 @@ function StatCard({
   label: string;
   value: string;
   icon: typeof Sparkles;
-  tone: "amber" | "cream" | "emerald";
+  tone: "indigo" | "cream" | "emerald";
   hint?: string;
 }) {
   const styles = {
-    amber:
-      "border-amber-300/50 from-amber-100/80 to-amber-50/40 dark:border-amber-400/15 dark:from-amber-400/[0.10] dark:to-amber-400/[0.02]",
+    indigo:
+      "border-indigo-300/50 from-indigo-100/80 to-indigo-50/40 dark:border-indigo-400/15 dark:from-indigo-400/[0.10] dark:to-indigo-400/[0.02]",
     cream:
-      "border-yellow-300/50 from-yellow-100/80 to-amber-50/40 dark:border-yellow-400/15 dark:from-yellow-400/[0.10] dark:to-yellow-400/[0.02]",
+      "border-sky-300/50 from-sky-100/80 to-indigo-50/40 dark:border-sky-400/15 dark:from-sky-400/[0.10] dark:to-sky-400/[0.02]",
     emerald:
       "border-emerald-300/50 from-emerald-100/80 to-emerald-50/40 dark:border-emerald-400/15 dark:from-emerald-400/[0.08] dark:to-emerald-400/[0.02]",
   }[tone];
@@ -361,4 +361,3 @@ function Tally({
     </div>
   );
 }
-

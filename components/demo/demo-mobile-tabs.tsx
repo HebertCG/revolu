@@ -35,7 +35,7 @@ export function DemoMobileTabs() {
             className={cn(
               "inline-flex shrink-0 items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-medium transition-colors",
               active
-                ? "bg-amber-400 text-amber-950"
+                ? "bg-indigo-500 text-white"
                 : "text-muted-foreground hover:text-foreground",
             )}
           >

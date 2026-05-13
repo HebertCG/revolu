@@ -33,7 +33,7 @@ export function Diferenciadores() {
     <section id="diferenciadores" className="relative py-20 sm:py-28">
       <Container>
         <SectionHeading
-          eyebrow="Lo que solo REVOLU tiene"
+          eyebrow="Lo que solo Klassia tiene"
           title="Tres armas que ninguna academia tradicional puede igualar"
           description="No estás comparando intranets. Estás comparando tu academia del 2026 contra una del 2030."
         />

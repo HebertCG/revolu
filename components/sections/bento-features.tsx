@@ -100,13 +100,13 @@ function renderBentoHeader(idx: number) {
           {["Admin", "Profesor", "Alumno"].map((role, i) => (
             <div
               key={role}
-              className="absolute inline-flex items-center gap-1.5 rounded-full border border-amber-400/30 bg-card px-2.5 py-0.5 text-[10px] font-medium text-amber-700 dark:text-amber-300 shadow-sm"
+              className="absolute inline-flex items-center gap-1.5 rounded-full border border-indigo-400/30 bg-card px-2.5 py-0.5 text-[10px] font-medium text-indigo-700 dark:text-indigo-300 shadow-sm"
               style={{
                 top: `${15 + (i % 2) * 35}%`,
                 left: `${15 + (i * 28) % 65}%`,
               }}
             >
-              <span className="h-1 w-1 rounded-full bg-amber-400" />
+              <span className="h-1 w-1 rounded-full bg-indigo-400" />
               {role}
             </div>
           ))}
@@ -121,14 +121,14 @@ function renderBentoHeader(idx: number) {
                 key={c}
                 className={`flex flex-col justify-end rounded p-1.5 text-[9px] font-medium ${
                   i === 1
-                    ? "bg-amber-400/20 text-amber-700 dark:text-amber-300"
+                    ? "bg-indigo-400/20 text-indigo-700 dark:text-indigo-300"
                     : "bg-card text-muted-foreground"
                 }`}
               >
                 {c}
                 <div
                   className={`mt-1 h-1 rounded-full ${
-                    i === 1 ? "bg-amber-400" : "bg-muted-foreground/30"
+                    i === 1 ? "bg-indigo-400" : "bg-muted-foreground/30"
                   }`}
                 />
               </div>
@@ -145,9 +145,9 @@ function renderBentoHeader(idx: number) {
                 key={i}
                 className={`rounded-sm ${
                   [3, 7, 8, 12, 14, 17].includes(i)
-                    ? "bg-amber-400"
+                    ? "bg-indigo-400"
                     : [1, 5, 11, 16].includes(i)
-                      ? "bg-amber-400/40"
+                      ? "bg-indigo-400/40"
                       : "bg-card"
                 }`}
               />
@@ -158,12 +158,12 @@ function renderBentoHeader(idx: number) {
     case 3: // Asistencia con enlace público
       return (
         <div className="relative flex h-20 items-center justify-center overflow-hidden rounded-lg border border-border bg-muted/40 p-3">
-          <div className="flex w-full max-w-[200px] items-center gap-1.5 rounded-full border border-amber-400/40 bg-card px-2.5 py-1.5 shadow-sm">
-            <span className="grid h-3 w-3 place-items-center rounded-full bg-amber-400/30">
-              <span className="h-1 w-1 rounded-full bg-amber-500" />
+          <div className="flex w-full max-w-[200px] items-center gap-1.5 rounded-full border border-indigo-400/40 bg-card px-2.5 py-1.5 shadow-sm">
+            <span className="grid h-3 w-3 place-items-center rounded-full bg-indigo-400/30">
+              <span className="h-1 w-1 rounded-full bg-indigo-500" />
             </span>
             <code className="flex-1 truncate font-mono text-[9px] text-muted-foreground">
-              revolu.pe/a/g-7K9
+              klassia.pe/a/g-7K9
             </code>
             <span className="rounded bg-emerald-500/15 px-1 py-px text-[7px] font-bold tracking-wide text-emerald-600 dark:text-emerald-400">
               LIVE
@@ -181,7 +181,7 @@ function renderBentoHeader(idx: number) {
                 className="flex h-14 w-11 flex-col rounded border border-border bg-card p-1.5 shadow-sm"
                 style={{ transform: `rotate(${(i - 1) * 5}deg)` }}
               >
-                <span className="text-[8px] font-bold text-amber-600 dark:text-amber-400">
+                <span className="text-[8px] font-bold text-indigo-600 dark:text-indigo-400">
                   {ext}
                 </span>
                 <div className="mt-auto space-y-0.5">
@@ -207,12 +207,12 @@ function renderBentoHeader(idx: number) {
                 className="flex items-center justify-between gap-2 text-[9px]"
               >
                 <div className="flex items-center gap-2">
-                  <span className="grid h-3 w-3 place-items-center rounded border border-amber-500/60 bg-card">
-                    <span className="h-1 w-1 rounded-sm bg-amber-500/40" />
+                  <span className="grid h-3 w-3 place-items-center rounded border border-indigo-500/60 bg-card">
+                    <span className="h-1 w-1 rounded-sm bg-indigo-500/40" />
                   </span>
                   <span className="text-card-foreground">{t.label}</span>
                 </div>
-                <span className="rounded bg-amber-400/15 px-1 py-px text-[7px] font-medium text-amber-700 dark:text-amber-300">
+                <span className="rounded bg-indigo-400/15 px-1 py-px text-[7px] font-medium text-indigo-700 dark:text-indigo-300">
                   {t.date}
                 </span>
               </li>
@@ -223,7 +223,7 @@ function renderBentoHeader(idx: number) {
     case 6: // Examen KaTeX
       return (
         <div className="relative flex h-20 items-center justify-center overflow-hidden rounded-lg border border-border bg-muted/40 p-2">
-          <code className="font-mono text-base font-semibold text-amber-600 dark:text-amber-400">
+          <code className="font-mono text-base font-semibold text-indigo-600 dark:text-indigo-400">
             ∫₀<sup>π</sup> sin(x) dx = 2
           </code>
         </div>
@@ -231,10 +231,10 @@ function renderBentoHeader(idx: number) {
     case 7: // Proctoring (tall)
       return (
         <div className="relative h-48 overflow-hidden rounded-lg border border-border bg-muted/40">
-          <div className="absolute inset-3 rounded border border-amber-400/30 bg-card">
+          <div className="absolute inset-3 rounded border border-indigo-400/30 bg-card">
             <div className="absolute inset-x-3 top-3 h-3 rounded bg-muted" />
-            <div className="absolute left-3 top-9 h-12 w-12 rounded-full bg-gradient-to-br from-amber-400/40 to-amber-600/40">
-              <div className="absolute inset-2 rounded-full border-2 border-dashed border-amber-400 animate-spin [animation-duration:8s]" />
+            <div className="absolute left-3 top-9 h-12 w-12 rounded-full bg-gradient-to-br from-indigo-400/40 to-emerald-400/40">
+              <div className="absolute inset-2 rounded-full border-2 border-dashed border-indigo-400 animate-spin [animation-duration:8s]" />
             </div>
             <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-emerald-400/15 px-1.5 py-0.5 text-[9px] font-medium text-emerald-600 dark:text-emerald-400">
               <span className="h-1 w-1 rounded-full bg-emerald-500 animate-pulse" />
@@ -263,10 +263,10 @@ function renderBentoHeader(idx: number) {
                 <div className="flex-1 h-1.5 rounded-full bg-muted">
                   <div
                     style={{ width: `${row.value}%` }}
-                    className="h-full rounded-full bg-gradient-to-r from-amber-400 to-amber-600"
+                    className="h-full rounded-full bg-gradient-to-r from-indigo-400 to-emerald-400"
                   />
                 </div>
-                <span className="text-[10px] font-medium tabular-nums text-amber-600 dark:text-amber-400">
+                <span className="text-[10px] font-medium tabular-nums text-indigo-600 dark:text-indigo-400">
                   {row.value}%
                 </span>
               </div>
@@ -284,8 +284,8 @@ function renderBentoHeader(idx: number) {
               <div className="h-0.5 w-2/3 rounded bg-muted" />
             </div>
           </div>
-          <span className="text-amber-500">→</span>
-          <div className="grid h-10 w-9 place-items-center rounded bg-gradient-to-br from-amber-300 to-amber-600 text-[8px] font-bold text-amber-950">
+          <span className="text-indigo-500">→</span>
+          <div className="grid h-10 w-9 place-items-center rounded bg-gradient-to-br from-indigo-300 to-indigo-600 text-[8px] font-bold text-white">
             DB
           </div>
         </div>
@@ -294,11 +294,11 @@ function renderBentoHeader(idx: number) {
       return (
         <div className="relative h-20 overflow-hidden rounded-lg border border-border bg-muted/40">
           <div className="absolute inset-x-2 top-2 flex h-5 items-center gap-1 rounded border border-border bg-card px-2">
-            <span className="h-1 w-1 rounded-full bg-amber-400" />
-            <span className="text-[8px] text-muted-foreground">academia.revolu.pe</span>
+            <span className="h-1 w-1 rounded-full bg-indigo-400" />
+            <span className="text-[8px] text-muted-foreground">academia.klassia.pe</span>
           </div>
           <div className="absolute inset-x-2 bottom-2 grid h-9 grid-cols-3 gap-1">
-            <div className="rounded bg-amber-400/30" />
+            <div className="rounded bg-indigo-400/30" />
             <div className="rounded bg-card border border-border" />
             <div className="rounded bg-card border border-border" />
           </div>
@@ -317,7 +317,7 @@ function renderBentoHeader(idx: number) {
               </div>
             </div>
             <div className="flex items-end justify-end gap-1.5">
-              <div className="rounded-lg rounded-br-sm bg-amber-400/20 px-2 py-1 text-[9px] text-amber-700 dark:text-amber-300">
+              <div className="rounded-lg rounded-br-sm bg-indigo-400/20 px-2 py-1 text-[9px] text-indigo-700 dark:text-indigo-300">
                 wa.me/...
               </div>
             </div>

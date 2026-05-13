@@ -47,13 +47,13 @@ export function InfiniteMovingCards({
             <blockquote className="relative">
               <div
                 aria-hidden
-                className="user-select-none pointer-events-none absolute -inset-x-0.5 -top-0.5 h-[2px] w-full bg-gradient-to-r from-transparent via-amber-400 to-transparent"
+                className="user-select-none pointer-events-none absolute -inset-x-0.5 -top-0.5 h-[2px] w-full bg-gradient-to-r from-transparent via-indigo-400 to-transparent"
               />
               <span className="text-sm leading-relaxed text-muted-foreground">
                 &ldquo;{item.quote}&rdquo;
               </span>
               <div className="mt-5 flex flex-row items-center gap-3">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-amber-600 text-xs font-semibold text-amber-950">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 text-xs font-semibold text-white">
                   {item.initials}
                 </div>
                 <div>

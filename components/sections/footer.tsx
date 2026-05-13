@@ -46,7 +46,7 @@ const columns = [
   {
     title: "Empresa",
     links: [
-      { label: "Sobre REVOLU", href: "#" },
+      { label: "Sobre Klassia", href: "#" },
       { label: "Clientes", href: "#clientes" },
       { label: "Blog", href: "#" },
       { label: "Contacto", href: "#" },
@@ -70,16 +70,16 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-amber-300 to-amber-600 text-amber-950 font-bold shadow-[0_0_18px_-4px_rgb(245_158_11/0.6)]">
-                R
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-indigo-400 to-indigo-700 text-white font-bold shadow-[0_0_18px_-4px_rgb(99_102_241/0.5)]">
+                K
               </span>
               <span className="text-lg font-semibold tracking-tight gradient-text-gold">
-                REVOLU
+                Klassia
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-muted-foreground">
-              La intranet con IA para academias preuniversitarias del norte del Perú. Construida
-              en Piura, lista para LATAM.
+              La plataforma educativa con IA para academias preuniversitarias del norte del Perú.
+              Construida en Piura, lista para toda LATAM.
             </p>
             <div className="mt-6 flex items-center gap-2">
               {[
@@ -91,7 +91,7 @@ export function Footer() {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="grid h-9 w-9 place-items-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:border-amber-400/50 hover:text-amber-500"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-border bg-card text-muted-foreground transition-colors hover:border-indigo-400/50 hover:text-indigo-500"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -110,7 +110,7 @@ export function Footer() {
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm text-muted-foreground transition-colors hover:text-amber-500"
+                        className="text-sm text-muted-foreground transition-colors hover:text-indigo-500 dark:hover:text-indigo-400"
                       >
                         {link.label}
                       </a>
@@ -124,7 +124,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row">
           <p>
-            © {new Date().getFullYear()} REVOLU SAC · RUC 20XXXXXXXXX · Piura, Perú
+            © {new Date().getFullYear()} Klassia SAC · RUC 20XXXXXXXXX · Piura, Perú
           </p>
           <p className="flex items-center gap-2">
             <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />

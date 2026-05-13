@@ -17,14 +17,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://revolu.pe"),
+  metadataBase: new URL("https://klassia.pe"),
   title: {
-    default: "REVOLU — Intranet con IA para academias preuniversitarias",
-    template: "%s · REVOLU",
+    default: "Klassia — La plataforma educativa que transforma tu academia",
+    template: "%s · Klassia",
   },
   description:
-    "Reemplaza WhatsApp + Excel con una intranet con IA: proctoring, test vocacional ML, simulacros UDEP/UPAO infinitos y gestión académica completa.",
+    "Gestión académica, proctoring con IA, test vocacional ML y simulacros UDEP/UPAO ilimitados. Klassia es la intranet que las academias líderes del norte del Perú ya están usando.",
   keywords: [
+    "plataforma educativa Perú",
     "intranet academia",
     "preuniversitario Perú",
     "proctoring IA",
@@ -35,32 +36,33 @@ export const metadata: Metadata = {
     "academia Piura",
     "academia Trujillo",
     "academia Chiclayo",
+    "Klassia",
   ],
-  authors: [{ name: "REVOLU" }],
-  creator: "REVOLU",
-  publisher: "REVOLU",
+  authors: [{ name: "Klassia" }],
+  creator: "Klassia",
+  publisher: "Klassia",
   openGraph: {
     type: "website",
     locale: "es_PE",
-    url: "https://revolu.pe",
-    siteName: "REVOLU",
-    title: "REVOLU — Intranet con IA para academias preuniversitarias",
+    url: "https://klassia.pe",
+    siteName: "Klassia",
+    title: "Klassia — La plataforma educativa que transforma tu academia",
     description:
-      "La intranet que las academias del 2030 ya están usando. Proctoring, simulacros UDEP/UPAO y test vocacional ML.",
+      "Gestión académica completa con IA. Proctoring, simulacros UDEP/UPAO y test vocacional ML en una sola plataforma.",
     images: [
       {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "REVOLU — Intranet con IA para academias",
+        alt: "Klassia — Plataforma educativa con IA",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "REVOLU — Intranet con IA para academias",
+    title: "Klassia — La plataforma educativa que transforma tu academia",
     description:
-      "Proctoring, simulacros UDEP/UPAO infinitos y test vocacional ML. Todo en una sola plataforma.",
+      "Proctoring, simulacros UDEP/UPAO y test vocacional ML. Todo en una sola plataforma educativa.",
     images: ["/og-image.svg"],
   },
   robots: {
@@ -82,8 +84,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fafaf9" },
-    { media: "(prefers-color-scheme: dark)", color: "#08080b" },
+    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
+    { media: "(prefers-color-scheme: dark)", color: "#080a14" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -94,11 +96,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      name: "REVOLU",
-      url: "https://revolu.pe",
-      logo: "https://revolu.pe/favicon.svg",
+      name: "Klassia",
+      url: "https://klassia.pe",
+      logo: "https://klassia.pe/favicon.svg",
       description:
-        "Intranet con IA para academias preuniversitarias del norte del Perú.",
+        "Plataforma educativa con IA para academias preuniversitarias del norte del Perú.",
       address: {
         "@type": "PostalAddress",
         addressCountry: "PE",
@@ -107,7 +109,7 @@ const jsonLd = {
     },
     {
       "@type": "SoftwareApplication",
-      name: "REVOLU",
+      name: "Klassia",
       applicationCategory: "EducationalApplication",
       operatingSystem: "Web",
       offers: {

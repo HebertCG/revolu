@@ -29,7 +29,7 @@ export function Meteors({ number = 20, className }: { number?: number; className
       {meteors.map((m, idx) => (
         <span
           key={idx}
-          className="absolute left-1/2 top-0 h-0.5 w-0.5 rotate-[215deg] animate-meteor rounded-full bg-amber-400 shadow-[0_0_0_1px_#ffffff10] before:absolute before:top-1/2 before:h-px before:w-[50px] before:-translate-y-1/2 before:transform before:bg-gradient-to-r before:from-amber-400 before:to-transparent before:content-['']"
+          className="absolute left-1/2 top-0 h-0.5 w-0.5 rotate-[215deg] animate-meteor rounded-full bg-indigo-400 shadow-[0_0_0_1px_#ffffff10] before:absolute before:top-1/2 before:h-px before:w-[50px] before:-translate-y-1/2 before:transform before:bg-gradient-to-r before:from-indigo-400 before:to-transparent before:content-['']"
           style={{
             top: 0,
             left: m.left,

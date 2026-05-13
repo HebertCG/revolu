@@ -6,11 +6,11 @@ import { Lock, Server } from "lucide-react";
 import { useState } from "react";
 
 const tenants = [
-  { name: "Andinos Piura", short: "AND", color: "from-amber-300 to-amber-500", students: 247 },
-  { name: "Saber Piura", short: "SAB", color: "from-yellow-300 to-amber-400", students: 412 },
-  { name: "Newton Sullana", short: "NEW", color: "from-amber-400 to-yellow-500", students: 320 },
-  { name: "Pamer Chiclayo", short: "PAM", color: "from-yellow-400 to-orange-400", students: 1024 },
-  { name: "Galois Trujillo", short: "GAL", color: "from-amber-200 to-amber-500", students: 198 },
+  { name: "Andinos Piura", short: "AND", color: "from-indigo-300 to-indigo-500", students: 247 },
+  { name: "Saber Piura", short: "SAB", color: "from-sky-300 to-indigo-400", students: 412 },
+  { name: "Newton Sullana", short: "NEW", color: "from-indigo-400 to-sky-500", students: 320 },
+  { name: "Pamer Chiclayo", short: "PAM", color: "from-sky-400 to-emerald-400", students: 1024 },
+  { name: "Galois Trujillo", short: "GAL", color: "from-indigo-200 to-indigo-500", students: 198 },
 ];
 
 export function MultiTenant() {
@@ -35,9 +35,9 @@ export function MultiTenant() {
                 whileInView={{ scale: 1, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="grid h-24 w-24 place-items-center rounded-2xl border border-amber-400/40 bg-card shadow-[0_0_60px_-12px_rgb(245_158_11/0.5)]"
+                className="grid h-24 w-24 place-items-center rounded-2xl border border-indigo-400/40 bg-card shadow-[0_0_60px_-12px_rgb(99_102_241/0.5)]"
               >
-                <Server className="h-8 w-8 text-amber-500" />
+                <Server className="h-8 w-8 text-indigo-500" />
                 <span className="mt-1 text-[10px] font-medium text-muted-foreground">
                   PG · RLS
                 </span>
@@ -63,8 +63,8 @@ export function MultiTenant() {
                   style={{ transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))` }}
                 >
                   <div
-                    className={`grid h-14 w-14 place-items-center rounded-xl border bg-gradient-to-br ${t.color} text-amber-950 shadow-md transition-transform ${
-                      hovered === idx ? "scale-110 ring-2 ring-amber-400" : ""
+                    className={`grid h-14 w-14 place-items-center rounded-xl border bg-gradient-to-br ${t.color} text-white shadow-md transition-transform ${
+                      hovered === idx ? "scale-110 ring-2 ring-indigo-400" : ""
                     }`}
                   >
                     <span className="text-[10px] font-bold">{t.short}</span>
@@ -90,7 +90,7 @@ export function MultiTenant() {
                     y1="0"
                     x2={x}
                     y2={y}
-                    stroke={hovered === idx ? "#fbbf24" : "#fbbf24"}
+                    stroke={hovered === idx ? "#6366f1" : "#6366f1"}
                     strokeOpacity={hovered === idx ? 0.8 : 0.2}
                     strokeWidth={hovered === idx ? "2" : "1"}
                     strokeDasharray="4 4"
@@ -118,12 +118,12 @@ export function MultiTenant() {
                   onMouseLeave={() => setHovered(null)}
                   className={`flex items-center gap-3 rounded-xl border p-3 transition-all ${
                     hovered === idx
-                      ? "border-amber-400/50 bg-amber-400/5"
+                      ? "border-indigo-400/50 bg-indigo-400/5"
                       : "border-border bg-card"
                   }`}
                 >
                   <div
-                    className={`grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br ${t.color} text-amber-950`}
+                    className={`grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br ${t.color} text-white`}
                   >
                     <span className="text-[10px] font-bold">
                       {t.short}
@@ -135,7 +135,7 @@ export function MultiTenant() {
                       {t.students} alumnos · datos aislados
                     </p>
                   </div>
-                  <Lock className="h-4 w-4 text-amber-500" />
+                  <Lock className="h-4 w-4 text-emerald-500" />
                 </motion.div>
               ))}
             </div>

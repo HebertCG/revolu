@@ -26,9 +26,9 @@ export function Stats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: i * 0.08 }}
-                className="group relative bg-card p-6 transition-colors hover:bg-amber-400/5 sm:p-8"
+                className="group relative bg-card p-6 transition-colors hover:bg-indigo-400/5 sm:p-8"
               >
-                <Icon className="h-5 w-5 text-amber-500 transition-transform group-hover:scale-110" />
+                <Icon className="h-5 w-5 text-indigo-500 transition-transform group-hover:scale-110" />
                 <div className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
                   <AnimatedCounter to={stat.value} suffix={stat.suffix} />
                 </div>

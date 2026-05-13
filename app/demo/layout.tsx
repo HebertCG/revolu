@@ -4,9 +4,9 @@ import { DemoSidebar } from "@/components/demo/demo-sidebar";
 import { DemoMobileTabs } from "@/components/demo/demo-mobile-tabs";
 
 export const metadata: Metadata = {
-  title: "Demo en vivo · REVOLU",
+  title: "Demo en vivo · Klassia",
   description:
-    "Recorre la intranet REVOLU como un alumno real. Modo demo: datos ficticios, sin acciones de guardado.",
+    "Recorre la intranet Klassia como un alumno real. Modo demo: datos ficticios, sin acciones de guardado.",
   robots: { index: false, follow: false },
 };
 

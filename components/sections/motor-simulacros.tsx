@@ -7,8 +7,8 @@ import { BackgroundBeams } from "@/components/animated/background-beams";
 
 const stages = [
   { icon: FileText, label: ".docx subido", color: "text-blue-500" },
-  { icon: Sparkles, label: "IA parsea", color: "text-amber-500" },
-  { icon: Brain, label: "Genera variantes", color: "text-amber-500" },
+  { icon: Sparkles, label: "IA parsea", color: "text-indigo-500" },
+  { icon: Brain, label: "Genera variantes", color: "text-indigo-500" },
   { icon: ChartBar, label: "Reporte de competencias", color: "text-emerald-500" },
 ];
 
@@ -22,7 +22,7 @@ export function MotorSimulacros() {
         <SectionHeading
           eyebrow="Motor de simulacros"
           title="Convertimos tu banco de Word en práctica infinita"
-          description="Tu profesor de Razonamiento Matemático tiene un banco de 200 preguntas en Word. Subiéndolas a REVOLU se convierten en miles de variantes, todas calibradas al mismo nivel UDEP/UPAO."
+          description="Tu profesor de Razonamiento Matemático tiene un banco de 200 preguntas en Word. Subiéndolas a Klassia se convierten en miles de variantes, todas calibradas al mismo nivel UDEP/UPAO."
         />
 
         <div className="mt-14 rounded-3xl border border-border bg-card/60 p-6 backdrop-blur-md sm:p-10">
@@ -39,7 +39,7 @@ export function MotorSimulacros() {
                   transition={{ delay: i * 0.15 }}
                   className="relative flex flex-col items-center text-center"
                 >
-                  <div className="grid h-14 w-14 place-items-center rounded-2xl border border-amber-400/30 bg-amber-400/5">
+                  <div className="grid h-14 w-14 place-items-center rounded-2xl border border-indigo-400/30 bg-indigo-400/5">
                     <Icon className={`h-5 w-5 ${stage.color}`} />
                   </div>
                   <p className="mt-3 text-xs font-medium">{stage.label}</p>
@@ -60,7 +60,7 @@ export function MotorSimulacros() {
             className="mt-10 rounded-2xl border border-border bg-background p-5 sm:p-6"
           >
             <div className="mb-3 flex items-center gap-2">
-              <span className="rounded-full bg-amber-400/15 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-amber-600 dark:text-amber-300">
+              <span className="rounded-full bg-indigo-400/15 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-300">
                 Variante #842
               </span>
               <span className="text-[10px] text-muted-foreground">
@@ -68,8 +68,8 @@ export function MotorSimulacros() {
               </span>
             </div>
             <p className="text-sm leading-relaxed text-card-foreground sm:text-base">
-              Si <span className="font-mono text-amber-600 dark:text-amber-400">f(x) = 2x² − 5x + 3</span>, calcula el valor de{" "}
-              <span className="font-mono text-amber-600 dark:text-amber-400">f(3) − f(1)</span>.
+              Si <span className="font-mono text-indigo-600 dark:text-indigo-400">f(x) = 2x² − 5x + 3</span>, calcula el valor de{" "}
+              <span className="font-mono text-indigo-600 dark:text-indigo-400">f(3) − f(1)</span>.
             </p>
             <ul className="mt-4 grid gap-2 sm:grid-cols-2">
               {[
@@ -82,14 +82,14 @@ export function MotorSimulacros() {
                   key={opt.label}
                   className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-sm ${
                     opt.correct
-                      ? "border-amber-400/50 bg-amber-400/10 text-amber-700 dark:text-amber-300"
+                      ? "border-indigo-400/50 bg-indigo-400/10 text-indigo-700 dark:text-indigo-300"
                       : "border-border bg-card text-muted-foreground"
                   }`}
                 >
                   <span
                     className={`grid h-4 w-4 place-items-center rounded-full border ${
                       opt.correct
-                        ? "border-amber-500 bg-amber-500"
+                        ? "border-indigo-500 bg-indigo-500"
                         : "border-border"
                     }`}
                   >

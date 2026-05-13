@@ -24,10 +24,10 @@ const steps = [
             <div className="mt-auto h-1 rounded bg-muted" />
           </div>
           <div className="flex h-20 w-16 flex-col rounded border border-border bg-background p-1.5 shadow-sm">
-            <span className="text-[8px] font-bold text-amber-500">CSV</span>
+            <span className="text-[8px] font-bold text-emerald-500">CSV</span>
             <div className="mt-auto h-1 rounded bg-muted" />
           </div>
-          <Upload className="absolute right-4 top-4 h-4 w-4 text-amber-500" />
+          <Upload className="absolute right-4 top-4 h-4 w-4 text-indigo-500" />
         </div>
       </div>
     ),
@@ -54,7 +54,7 @@ const steps = [
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="flex items-center justify-center rounded border border-amber-400/30 bg-amber-400/5 text-[10px] font-medium text-amber-700 dark:text-amber-300"
+              className="flex items-center justify-center rounded border border-indigo-400/30 bg-indigo-400/5 text-[10px] font-medium text-indigo-700 dark:text-indigo-300"
             >
               {label}
             </motion.div>
@@ -70,12 +70,12 @@ const steps = [
       "Sin descargar app. Solo abren el link, ingresan su DNI o usuario y entran a la intranet.",
     visual: (
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl border border-border bg-card p-6">
-        <div className="mx-auto flex max-w-xs flex-col items-center justify-center gap-3 rounded-xl border border-amber-400/30 bg-amber-400/5 p-4">
-          <div className="grid h-12 w-12 place-items-center rounded bg-gradient-to-br from-amber-300 to-amber-600">
-            <span className="text-xs font-bold text-amber-950">QR</span>
+        <div className="mx-auto flex max-w-xs flex-col items-center justify-center gap-3 rounded-xl border border-indigo-400/30 bg-indigo-400/5 p-4">
+          <div className="grid h-12 w-12 place-items-center rounded bg-gradient-to-br from-indigo-400 to-indigo-600">
+            <span className="text-xs font-bold text-white">QR</span>
           </div>
           <div className="text-center">
-            <p className="text-xs font-medium">academia-andinos.revolu.pe</p>
+            <p className="text-xs font-medium">academia-andinos.klassia.pe</p>
             <p className="mt-1 text-[10px] text-muted-foreground">
               Escanea o haz clic
             </p>
@@ -101,7 +101,7 @@ const steps = [
                 whileInView={{ width: "94%" }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="h-full rounded-full bg-gradient-to-r from-amber-400 to-amber-600"
+                className="h-full rounded-full bg-gradient-to-r from-indigo-400 to-emerald-400"
               />
             </div>
           </div>
@@ -114,7 +114,7 @@ const steps = [
                 whileInView={{ width: "87%" }}
                 viewport={{ once: true }}
                 transition={{ duration: 1, delay: 0.1, ease: "easeOut" }}
-                className="h-full rounded-full bg-gradient-to-r from-amber-400 to-amber-600"
+                className="h-full rounded-full bg-gradient-to-r from-indigo-400 to-emerald-400"
               />
             </div>
           </div>
@@ -128,7 +128,7 @@ const steps = [
                   whileInView={{ height: `${h}%` }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.05 * i }}
-                  className="flex-1 rounded-t bg-gradient-to-t from-amber-500 to-amber-300"
+                  className="flex-1 rounded-t bg-gradient-to-t from-indigo-500 to-sky-400"
                   style={{ minHeight: "8px" }}
                 />
               ))}
@@ -165,7 +165,7 @@ export function ComoFunciona() {
                     className="grid gap-6 md:grid-cols-2 md:items-center md:gap-10"
                   >
                     <div>
-                      <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-amber-400/30 bg-amber-400/10 text-amber-500">
+                      <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-indigo-400/30 bg-indigo-400/10 text-indigo-500">
                         <Icon className="h-4 w-4" />
                       </div>
                       <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">

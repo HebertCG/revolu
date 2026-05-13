@@ -48,13 +48,13 @@ export function FloatingNavbar({ items }: { items: NavItem[] }) {
         <a
           href="#hero"
           className="flex items-center gap-2 px-2"
-          aria-label="REVOLU — Inicio"
+          aria-label="Klassia — Inicio"
         >
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-amber-300 to-amber-600 text-amber-950 font-bold shadow-[0_0_18px_-4px_rgb(245_158_11/0.6)]">
-            R
+          <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-indigo-400 to-indigo-600 text-white font-bold shadow-[0_0_18px_-4px_rgb(99_102_241/0.6)]">
+            K
           </span>
-          <span className="font-semibold tracking-tight gradient-text-gold">
-            REVOLU
+          <span className="font-semibold tracking-tight gradient-text-primary">
+            Klassia
           </span>
         </a>
 
@@ -63,7 +63,7 @@ export function FloatingNavbar({ items }: { items: NavItem[] }) {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-amber-400/10 hover:text-amber-500 dark:hover:text-amber-300"
+              className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-indigo-400/10 hover:text-indigo-500 dark:hover:text-indigo-300"
             >
               {item.label}
             </a>
@@ -106,7 +106,7 @@ export function FloatingNavbar({ items }: { items: NavItem[] }) {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-amber-400/10 hover:text-amber-500"
+                    className="rounded-lg px-3 py-2 text-sm text-muted-foreground hover:bg-indigo-400/10 hover:text-indigo-500"
                   >
                     {item.label}
                   </a>

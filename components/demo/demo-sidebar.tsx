@@ -35,11 +35,11 @@ export function DemoSidebar() {
 
       {/* Brand */}
       <div className="flex items-center gap-2.5 px-5 pt-5 pb-4">
-        <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-amber-300 to-amber-600 text-amber-950 font-bold shadow-[0_0_18px_-4px_rgb(245_158_11/0.6)]">
-          R
+        <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-indigo-400 to-indigo-600 text-white font-bold shadow-[0_0_18px_-4px_rgb(99_102_241/0.6)]">
+          K
         </span>
         <div className="leading-tight">
-          <p className="text-sm font-semibold gradient-text-gold">{demoAcademy.name}</p>
+          <p className="text-sm font-semibold gradient-text-primary">{demoAcademy.name}</p>
           <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-500">
             Intranet
           </p>
@@ -49,15 +49,15 @@ export function DemoSidebar() {
       {/* User card */}
       <div className="mx-3 mb-4 rounded-xl border border-zinc-800 bg-zinc-900/80 p-2.5">
         <div className="flex items-center gap-2.5">
-          <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-amber-300 to-amber-600 text-xs font-bold text-amber-950 shadow-[0_0_18px_-6px_rgb(245_158_11/0.5)]">
+          <div className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-indigo-400 to-indigo-600 text-xs font-bold text-white shadow-[0_0_18px_-6px_rgb(99_102_241/0.5)]">
             {demoUser.initials}
           </div>
           <div className="min-w-0">
             <p className="truncate text-xs font-medium text-zinc-100">
               {demoUser.shortName} Zapata Kri…
             </p>
-            <p className="flex items-center gap-1 text-[10px] text-amber-400">
-              <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse-gold" />
+            <p className="flex items-center gap-1 text-[10px] text-indigo-400">
+              <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse-primary" />
               {demoUser.role}
             </p>
           </div>
@@ -76,7 +76,7 @@ export function DemoSidebar() {
                   className={cn(
                     "flex items-center justify-between gap-2 rounded-lg px-3 py-2 text-sm transition-colors",
                     active
-                      ? "bg-amber-400/15 text-amber-300 ring-1 ring-amber-400/25 shadow-[0_0_18px_-8px_rgb(245_158_11/0.5)]"
+                      ? "bg-indigo-500/15 text-indigo-300 ring-1 ring-indigo-500/25 shadow-[0_0_18px_-8px_rgb(99_102_241/0.5)]"
                       : "text-zinc-400 hover:bg-zinc-900 hover:text-zinc-200",
                   )}
                 >

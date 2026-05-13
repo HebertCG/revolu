@@ -22,21 +22,21 @@ export function Calculadora() {
     return Math.round((developer + designer + ops) * months + upkeep * Math.max(1, scale));
   }, [students, teachers]);
 
-  const revoluMonthly = useMemo(() => {
+  const klassiaMonthly = useMemo(() => {
     if (students <= 50) return 199;
     if (students <= 200) return 449;
     return 899;
   }, [students]);
 
-  const revoluYear = revoluMonthly * 12;
-  const savings = customCost - revoluYear;
+  const klassiaYear = klassiaMonthly * 12;
+  const savings = customCost - klassiaYear;
 
   return (
     <section className="relative py-20 sm:py-28">
       <Container>
         <SectionHeading
           eyebrow="Calculadora"
-          title="¿Cuánto te ahorras con REVOLU?"
+          title="¿Cuánto te ahorras con Klassia?"
           description="Mueve los sliders según el tamaño de tu academia. Comparamos contra construir tu propia intranet desde cero (desarrollo + mantenimiento)."
         />
 
@@ -49,7 +49,7 @@ export function Calculadora() {
                   <label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                     Alumnos
                   </label>
-                  <span className="text-xl font-semibold tabular-nums text-amber-600 dark:text-amber-400">
+                  <span className="text-xl font-semibold tabular-nums text-indigo-600 dark:text-indigo-400">
                     {students}
                   </span>
                 </div>
@@ -60,7 +60,7 @@ export function Calculadora() {
                   step="10"
                   value={students}
                   onChange={(e) => setStudents(Number(e.target.value))}
-                  className="w-full accent-amber-500"
+                  className="w-full accent-indigo-500"
                   aria-label="Cantidad de alumnos"
                 />
                 <div className="mt-1 flex justify-between text-[10px] text-muted-foreground">
@@ -74,7 +74,7 @@ export function Calculadora() {
                   <label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
                     Profesores
                   </label>
-                  <span className="text-xl font-semibold tabular-nums text-amber-600 dark:text-amber-400">
+                  <span className="text-xl font-semibold tabular-nums text-indigo-600 dark:text-indigo-400">
                     {teachers}
                   </span>
                 </div>
@@ -85,7 +85,7 @@ export function Calculadora() {
                   step="1"
                   value={teachers}
                   onChange={(e) => setTeachers(Number(e.target.value))}
-                  className="w-full accent-amber-500"
+                  className="w-full accent-indigo-500"
                   aria-label="Cantidad de profesores"
                 />
                 <div className="mt-1 flex justify-between text-[10px] text-muted-foreground">
@@ -96,7 +96,7 @@ export function Calculadora() {
             </div>
 
             {/* Output */}
-            <div className="rounded-2xl border border-amber-400/30 bg-gradient-to-br from-amber-400/[0.08] to-yellow-400/[0.04] p-5 sm:p-6">
+            <div className="rounded-2xl border border-indigo-400/30 bg-gradient-to-br from-indigo-400/[0.08] to-emerald-400/[0.04] p-5 sm:p-6">
               <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground">
                 <Calculator className="h-3 w-3" />
                 Construir desde cero
@@ -110,22 +110,22 @@ export function Calculadora() {
                 S/ {fmt(customCost)}/año
               </motion.div>
 
-              <div className="mt-4 flex items-center gap-2 text-xs uppercase tracking-wider text-amber-700 dark:text-amber-300">
-                Con REVOLU
+              <div className="mt-4 flex items-center gap-2 text-xs uppercase tracking-wider text-indigo-700 dark:text-indigo-300">
+                Con Klassia
               </div>
               <motion.div
-                key={revoluMonthly}
+                key={klassiaMonthly}
                 initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="mt-1"
               >
-                <span className="text-3xl font-semibold tabular-nums gradient-text-gold">
-                  S/ {fmt(revoluMonthly)}
+                <span className="text-3xl font-semibold tabular-nums gradient-text-primary">
+                  S/ {fmt(klassiaMonthly)}
                 </span>
                 <span className="ml-1 text-sm text-muted-foreground">/mes</span>
               </motion.div>
 
-              <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-card/60 px-3 py-1.5 backdrop-blur">
+              <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-card/60 px-3 py-1.5 backdrop-blur">
                 <TrendingDown className="h-3.5 w-3.5 text-emerald-500" />
                 <span className="text-xs font-medium">
                   Ahorras{" "}

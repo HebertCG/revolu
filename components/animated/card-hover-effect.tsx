@@ -39,7 +39,7 @@ export function CardHoverEffect({
             {hovered === idx && (
               <motion.span
                 key="hover-bg"
-                className="absolute inset-0 block h-full w-full rounded-2xl bg-gradient-to-br from-amber-400/20 via-amber-500/10 to-transparent"
+                className="absolute inset-0 block h-full w-full rounded-2xl bg-gradient-to-br from-indigo-400/20 via-indigo-500/10 to-transparent"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, transition: { duration: 0.15 } }}

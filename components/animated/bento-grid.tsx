@@ -58,7 +58,7 @@ export function BentoCard({
       whileHover={{ y: -4 }}
       transition={{ duration: 0.3 }}
       className={cn(
-        "group/bento relative row-span-1 flex flex-col gap-3 overflow-hidden rounded-xl border border-border bg-card p-5 transition-all duration-200 hover:border-amber-400/50 hover:shadow-[0_0_30px_-8px_rgb(245_158_11/0.4)]",
+        "group/bento relative row-span-1 flex flex-col gap-3 overflow-hidden rounded-xl border border-border bg-card p-5 transition-all duration-200 hover:border-indigo-400/50 hover:shadow-[0_0_30px_-8px_rgb(99_102_241/0.4)]",
         spanClass,
         className,
       )}
@@ -79,7 +79,7 @@ export function BentoCard({
         )}
       >
         {icon && (
-          <div className="mb-1 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-amber-400/30 bg-amber-400/10 text-amber-500 transition-colors group-hover/bento:border-amber-400 group-hover/bento:bg-amber-400/20 dark:text-amber-400">
+          <div className="mb-1 inline-flex h-9 w-9 items-center justify-center rounded-lg border border-indigo-400/30 bg-indigo-400/10 text-indigo-500 transition-colors group-hover/bento:border-indigo-400 group-hover/bento:bg-indigo-400/20 dark:text-indigo-400">
             {icon}
           </div>
         )}

@@ -23,7 +23,7 @@ const plans: Plan[] = [
     name: "Básico",
     monthly: 199,
     annual: 159,
-    tagline: "Para academias que recién digitalizan",
+    tagline: "Ideal para academias que empiezan a digitalizar",
     cta: "Empezar 14 días gratis",
     included: [
       { label: "50 alumnos · 5 profesores · 1 admin", included: true },
@@ -31,15 +31,15 @@ const plans: Plan[] = [
       { label: "Exámenes con KaTeX, asistencia, pagos", included: true },
       { label: "Test vocacional CHASIDE", included: true },
       { label: "Proctoring con IA", included: false },
-      { label: "Simulacros UDEP/UPAO infinitos", included: false },
+      { label: "Simulacros UDEP/UPAO ilimitados", included: false },
     ],
   },
   {
     name: "Pro",
     monthly: 449,
     annual: 359,
-    tagline: "Para academias que compiten en serio",
-    cta: "Pedir demo",
+    tagline: "Para academias que quieren liderar su ciudad",
+    cta: "Solicitar demo",
     popular: true,
     included: [
       { label: "200 alumnos · 15 profesores · 3 admins", included: true },
@@ -53,10 +53,10 @@ const plans: Plan[] = [
     ],
   },
   {
-    name: "Empresa",
+    name: "Institución",
     monthly: 899,
     annual: 719,
-    tagline: "Para academias grandes y colegios",
+    tagline: "Para academias grandes, colegios e institutos",
     cta: "Hablar con ventas",
     included: [
       { label: "Alumnos y profesores ilimitados", included: true },
@@ -67,7 +67,7 @@ const plans: Plan[] = [
       { label: "Predictor de ingreso UDEP/UPAO con ML", included: true },
       { label: "Portal del apoderado", included: true },
       { label: "API REST", included: true },
-      { label: "Soporte 24/7", included: true },
+      { label: "Soporte 24/7 prioritario", included: true },
     ],
   },
 ];
@@ -81,7 +81,7 @@ export function Pricing() {
         <SectionHeading
           eyebrow="Precios transparentes"
           title="Paga por academia, no por alumno"
-          description="Sin sorpresas, sin cobros ocultos, sin contratos de un año. Cancela cuando quieras."
+          description="Sin sorpresas, sin cobros ocultos. Invierte en tu academia con la confianza de que puedes cancelar cuando quieras."
         />
 
         {/* Toggle */}
@@ -92,13 +92,13 @@ export function Pricing() {
               onClick={() => setAnnual(false)}
               className={cn(
                 "relative rounded-full px-5 py-1.5 text-sm font-medium transition-colors",
-                !annual ? "text-amber-950" : "text-muted-foreground hover:text-foreground",
+                !annual ? "text-white" : "text-muted-foreground hover:text-foreground",
               )}
             >
               {!annual && (
                 <motion.div
                   layoutId="billing-toggle"
-                  className="absolute inset-0 rounded-full bg-gradient-to-b from-amber-400 to-amber-500 shadow"
+                  className="absolute inset-0 rounded-full bg-gradient-to-b from-indigo-500 to-indigo-700 shadow"
                   transition={{ duration: 0.25 }}
                 />
               )}
@@ -109,19 +109,19 @@ export function Pricing() {
               onClick={() => setAnnual(true)}
               className={cn(
                 "relative inline-flex items-center gap-2 rounded-full px-5 py-1.5 text-sm font-medium transition-colors",
-                annual ? "text-amber-950" : "text-muted-foreground hover:text-foreground",
+                annual ? "text-white" : "text-muted-foreground hover:text-foreground",
               )}
             >
               {annual && (
                 <motion.div
                   layoutId="billing-toggle"
-                  className="absolute inset-0 rounded-full bg-gradient-to-b from-amber-400 to-amber-500 shadow"
+                  className="absolute inset-0 rounded-full bg-gradient-to-b from-indigo-500 to-indigo-700 shadow"
                   transition={{ duration: 0.25 }}
                 />
               )}
               <span className="relative inline-flex items-center gap-2">
                 Anual
-                <span className="rounded-full bg-amber-950/15 px-1.5 py-0.5 text-[10px] font-semibold">
+                <span className="rounded-full bg-emerald-500/20 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-600 dark:text-emerald-400">
                   -20%
                 </span>
               </span>
@@ -143,18 +143,18 @@ export function Pricing() {
                 className={cn(
                   "relative flex flex-col rounded-3xl border bg-card p-6 sm:p-8 transition-shadow",
                   plan.popular
-                    ? "border-amber-400/50 shadow-[0_0_60px_-12px_rgb(245_158_11/0.5)] lg:scale-[1.04] lg:z-10"
-                    : "border-border hover:border-amber-400/30",
+                    ? "border-indigo-400/50 shadow-[0_0_60px_-12px_rgb(99_102_241/0.5)] lg:scale-[1.04] lg:z-10"
+                    : "border-border hover:border-indigo-400/30",
                 )}
               >
                 {plan.popular && (
                   <>
                     <div
                       aria-hidden
-                      className="absolute -inset-px -z-10 rounded-3xl bg-gradient-to-br from-amber-400/40 via-yellow-300/20 to-amber-500/40 opacity-50"
+                      className="absolute -inset-px -z-10 rounded-3xl bg-gradient-to-br from-indigo-400/30 via-sky-300/15 to-emerald-400/20 opacity-50"
                     />
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                      <span className="inline-flex items-center gap-1 rounded-full border border-amber-400/50 bg-gradient-to-r from-amber-400 to-amber-500 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-amber-950 shadow">
+                      <span className="inline-flex items-center gap-1 rounded-full border border-indigo-400/50 bg-gradient-to-r from-indigo-500 to-indigo-700 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white shadow">
                         <Sparkles className="h-3 w-3" />
                         Más popular
                       </span>
@@ -201,7 +201,7 @@ export function Pricing() {
                       <span
                         className={cn(
                           "mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full",
-                          feat.included ? "bg-amber-400/20 text-amber-600 dark:text-amber-300" : "bg-muted text-muted-foreground",
+                          feat.included ? "bg-indigo-400/20 text-indigo-600 dark:text-indigo-300" : "bg-muted text-muted-foreground",
                         )}
                       >
                         {feat.included ? <Check className="h-2.5 w-2.5" /> : <X className="h-2.5 w-2.5" />}
@@ -217,7 +217,7 @@ export function Pricing() {
 
         <p className="mx-auto mt-10 max-w-2xl text-center text-xs text-muted-foreground">
           Todos los planes incluyen SSL, multi-tenant aislado, actualizaciones automáticas y hosting en{" "}
-          <span className="text-foreground font-medium">Hetzner Cloud (Ashburn)</span>.
+          <span className="text-foreground font-medium">Hetzner Cloud</span>.
         </p>
       </Container>
     </section>

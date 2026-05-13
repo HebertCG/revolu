@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "¿Necesito instalar algo en las computadoras de los alumnos?",
     answer:
-      "No. REVOLU funciona 100% en el navegador, incluso el proctoring con IA. Solo necesitan acceso a internet y una webcam. Funciona en Chrome, Edge, Safari y Firefox modernos.",
+      "No. Klassia funciona 100% en el navegador, incluso el proctoring con IA. Solo necesitan acceso a internet y una webcam. Funciona en Chrome, Edge, Safari y Firefox modernos.",
   },
   {
     question: "¿Qué pasa con los datos de mi academia? ¿Son míos?",
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: "¿Puedo usar mi propio dominio (intranet.miacademia.pe)?",
     answer:
-      "Sí, en el plan Empresa. Configuramos tu dominio personalizado con SSL automático y marca blanca completa. En Pro y Básico usas tu subdominio en revolu.pe (ej: andinos.revolu.pe).",
+      "Sí, en el plan Institución. Configuramos tu dominio personalizado con SSL automático y marca blanca completa. En Pro y Básico usas tu subdominio en klassia.pe (ej: andinos.klassia.pe).",
   },
   {
     question: "¿Cómo cobro mensualidades por Yape o Plin?",
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "¿Qué pasa si mi academia crece de 50 a 500 alumnos?",
     answer:
-      "Cambias de plan en un click. La data se mantiene intacta. Los precios escalan por banda (Básico hasta 50, Pro hasta 200, Empresa ilimitado), no por alumno individual, así que tu costo no se dispara.",
+      "Cambias de plan en un click. La data se mantiene intacta. Los precios escalan por banda (Básico hasta 50, Pro hasta 200, Institución ilimitado), no por alumno individual, así que tu costo no se dispara.",
   },
   {
     question: "¿Hay un periodo de prueba o garantía?",

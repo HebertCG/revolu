@@ -50,7 +50,7 @@ export function TracingBeam({
                 ? "none"
                 : "rgba(251,191,36,0.4) 0 0 0 4px",
           }}
-          className="ml-[27px] flex h-4 w-4 items-center justify-center rounded-full border border-amber-400/40 bg-background shadow-sm"
+          className="ml-[27px] flex h-4 w-4 items-center justify-center rounded-full border border-indigo-400/40 bg-background shadow-sm"
         >
           <motion.div
             transition={{ duration: 0.2, delay: 0.5 }}
@@ -64,7 +64,7 @@ export function TracingBeam({
                   ? "rgb(250,250,249)"
                   : "rgb(217,119,6)",
             }}
-            className="h-2 w-2 rounded-full border bg-amber-400"
+            className="h-2 w-2 rounded-full border bg-indigo-400"
           />
         </motion.div>
         <svg

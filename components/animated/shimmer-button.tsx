@@ -26,7 +26,7 @@ export function ShimmerButton({
         } as React.CSSProperties
       }
       className={cn(
-        "group relative inline-flex h-12 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-amber-400/40 bg-gradient-to-b from-amber-400 to-amber-500 px-7 text-sm font-medium text-amber-950 shadow-[0_4px_20px_-4px_rgb(245_158_11/0.5)] transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+        "group relative inline-flex h-12 cursor-pointer items-center justify-center overflow-hidden rounded-full border border-indigo-400/40 bg-gradient-to-b from-indigo-500 to-indigo-700 px-7 text-sm font-medium text-white shadow-[0_4px_20px_-4px_rgb(99_102_241/0.5)] transition-transform duration-150 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
         className,
       )}
     >

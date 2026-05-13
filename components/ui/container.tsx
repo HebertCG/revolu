@@ -27,8 +27,8 @@ export function SectionHeading({
   return (
     <div className={cn("mx-auto max-w-3xl text-center", className)}>
       {eyebrow && (
-        <span className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-amber-600 dark:text-amber-300">
-          <span className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse-gold" />
+        <span className="inline-flex items-center gap-2 rounded-full border border-indigo-400/30 bg-indigo-400/5 px-3 py-1 text-xs font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-300">
+          <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse-primary" />
           {eyebrow}
         </span>
       )}

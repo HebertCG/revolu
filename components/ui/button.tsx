@@ -5,17 +5,17 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef, type ButtonHTMLAttributes } from "react";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]",
+  "inline-flex items-center justify-center gap-2 rounded-full text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 active:scale-[0.98]",
   {
     variants: {
       variant: {
         primary:
-          "bg-gradient-to-b from-amber-400 to-amber-500 text-amber-950 shadow-[0_4px_20px_-4px_rgb(245_158_11/0.5)] hover:shadow-[0_6px_28px_-4px_rgb(245_158_11/0.65)]",
+          "bg-gradient-to-b from-indigo-500 to-indigo-700 text-white shadow-[0_4px_20px_-4px_rgb(99_102_241/0.5)] hover:shadow-[0_6px_28px_-4px_rgb(99_102_241/0.65)]",
         ghost:
-          "border border-border bg-card/50 text-foreground backdrop-blur hover:border-amber-400/50 hover:text-amber-500",
+          "border border-border bg-card/50 text-foreground backdrop-blur hover:border-indigo-400/50 hover:text-indigo-500",
         outline:
-          "border border-amber-400/50 text-amber-500 hover:bg-amber-400/10 dark:text-amber-400",
-        link: "text-amber-500 underline-offset-4 hover:underline dark:text-amber-400",
+          "border border-indigo-400/50 text-indigo-500 hover:bg-indigo-400/10 dark:text-indigo-400",
+        link: "text-indigo-500 underline-offset-4 hover:underline dark:text-indigo-400",
       },
       size: {
         sm: "h-9 px-4",

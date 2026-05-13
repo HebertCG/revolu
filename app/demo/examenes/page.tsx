@@ -169,7 +169,7 @@ export default function DemoExamenes() {
         </span>
         <h3 className="mt-3 text-lg font-semibold">¿Listo para más práctica?</h3>
         <p className="mx-auto mt-1 max-w-md text-sm text-muted-foreground">
-          REVOLU genera variantes ilimitadas de exámenes a partir de tu banco de Word.
+          Klassia genera variantes ilimitadas de exámenes a partir de tu banco de Word.
           Cuando tu docente programe uno nuevo aparecerá aquí.
         </p>
         <span className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-amber-400/15 px-3 py-1 text-[11px] font-semibold text-amber-700 dark:text-amber-300">

@@ -3,66 +3,76 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: 250 250 249;
-  --foreground: 12 10 9;
+  --background: 248 250 252;
+  --foreground: 15 23 42;
   --card: 255 255 255;
-  --card-foreground: 12 10 9;
+  --card-foreground: 15 23 42;
   --popover: 255 255 255;
-  --popover-foreground: 12 10 9;
-  --primary: 217 119 6;
+  --popover-foreground: 15 23 42;
+  --primary: 79 70 229;
   --primary-foreground: 255 255 255;
-  --secondary: 245 245 244;
-  --secondary-foreground: 12 10 9;
-  --muted: 245 245 244;
-  --muted-foreground: 87 83 78;
-  --accent: 245 158 11;
-  --accent-foreground: 12 10 9;
+  --secondary: 241 245 249;
+  --secondary-foreground: 15 23 42;
+  --muted: 241 245 249;
+  --muted-foreground: 100 116 139;
+  --accent: 16 185 129;
+  --accent-foreground: 255 255 255;
   --destructive: 220 38 38;
   --destructive-foreground: 255 255 255;
-  --border: 231 229 228;
-  --input: 231 229 228;
-  --ring: 217 119 6;
-  --gold-50: 254 252 232;
-  --gold-100: 254 249 195;
-  --gold-200: 254 240 138;
-  --gold-300: 253 224 71;
-  --gold-400: 250 204 21;
-  --gold-500: 234 179 8;
-  --gold-600: 202 138 4;
-  --gold-700: 161 98 7;
-  --gold-800: 133 77 14;
-  --gold-900: 113 63 18;
-  --amber-300: 252 211 77;
-  --amber-400: 251 191 36;
-  --amber-500: 245 158 11;
-  --amber-600: 217 119 6;
-  --grid: rgba(0, 0, 0, 0.05);
-  --grid-bright: rgba(0, 0, 0, 0.08);
+  --border: 226 232 240;
+  --input: 226 232 240;
+  --ring: 79 70 229;
+
+  /* Indigo scale */
+  --indigo-50: 238 242 255;
+  --indigo-100: 224 231 255;
+  --indigo-200: 199 210 254;
+  --indigo-300: 165 180 252;
+  --indigo-400: 129 140 248;
+  --indigo-500: 99 102 241;
+  --indigo-600: 79 70 229;
+  --indigo-700: 67 56 202;
+  --indigo-800: 55 48 163;
+  --indigo-900: 49 46 129;
+
+  /* Emerald scale */
+  --emerald-300: 110 231 183;
+  --emerald-400: 52 211 153;
+  --emerald-500: 16 185 129;
+  --emerald-600: 5 150 105;
+
+  /* Sky scale */
+  --sky-300: 125 211 252;
+  --sky-400: 56 189 248;
+  --sky-500: 14 165 233;
+
+  --grid: rgba(99, 102, 241, 0.05);
+  --grid-bright: rgba(99, 102, 241, 0.08);
   --radius: 0.75rem;
 }
 
 .dark {
-  --background: 8 8 11;
-  --foreground: 250 250 249;
-  --card: 18 18 22;
-  --card-foreground: 250 250 249;
-  --popover: 18 18 22;
-  --popover-foreground: 250 250 249;
-  --primary: 251 191 36;
-  --primary-foreground: 12 10 9;
-  --secondary: 39 39 42;
-  --secondary-foreground: 250 250 249;
-  --muted: 30 30 34;
-  --muted-foreground: 161 161 170;
-  --accent: 245 158 11;
-  --accent-foreground: 250 250 249;
+  --background: 8 10 20;
+  --foreground: 248 250 252;
+  --card: 15 20 40;
+  --card-foreground: 248 250 252;
+  --popover: 15 20 40;
+  --popover-foreground: 248 250 252;
+  --primary: 129 140 248;
+  --primary-foreground: 15 23 42;
+  --secondary: 25 35 60;
+  --secondary-foreground: 248 250 252;
+  --muted: 22 30 52;
+  --muted-foreground: 148 163 184;
+  --accent: 52 211 153;
+  --accent-foreground: 15 23 42;
   --destructive: 248 113 113;
-  --destructive-foreground: 12 10 9;
-  --border: 39 39 42;
-  --input: 39 39 42;
-  --ring: 251 191 36;
-  --grid: rgba(255, 255, 255, 0.05);
-  --grid-bright: rgba(255, 255, 255, 0.08);
+  --destructive-foreground: 15 23 42;
+  --border: 30 41 70;
+  --input: 30 41 70;
+  --ring: 129 140 248;
+  --grid: rgba(129, 140, 248, 0.06);
+  --grid-bright: rgba(129, 140, 248, 0.10);
 }
 
 @theme inline {
@@ -85,20 +95,23 @@
   --color-border: rgb(var(--border));
   --color-input: rgb(var(--input));
   --color-ring: rgb(var(--ring));
-  --color-gold-50: rgb(var(--gold-50));
-  --color-gold-100: rgb(var(--gold-100));
-  --color-gold-200: rgb(var(--gold-200));
-  --color-gold-300: rgb(var(--gold-300));
-  --color-gold-400: rgb(var(--gold-400));
-  --color-gold-500: rgb(var(--gold-500));
-  --color-gold-600: rgb(var(--gold-600));
-  --color-gold-700: rgb(var(--gold-700));
-  --color-gold-800: rgb(var(--gold-800));
-  --color-gold-900: rgb(var(--gold-900));
-  --color-amber-300: rgb(var(--amber-300));
-  --color-amber-400: rgb(var(--amber-400));
-  --color-amber-500: rgb(var(--amber-500));
-  --color-amber-600: rgb(var(--amber-600));
+  --color-indigo-50: rgb(var(--indigo-50));
+  --color-indigo-100: rgb(var(--indigo-100));
+  --color-indigo-200: rgb(var(--indigo-200));
+  --color-indigo-300: rgb(var(--indigo-300));
+  --color-indigo-400: rgb(var(--indigo-400));
+  --color-indigo-500: rgb(var(--indigo-500));
+  --color-indigo-600: rgb(var(--indigo-600));
+  --color-indigo-700: rgb(var(--indigo-700));
+  --color-indigo-800: rgb(var(--indigo-800));
+  --color-indigo-900: rgb(var(--indigo-900));
+  --color-emerald-300: rgb(var(--emerald-300));
+  --color-emerald-400: rgb(var(--emerald-400));
+  --color-emerald-500: rgb(var(--emerald-500));
+  --color-emerald-600: rgb(var(--emerald-600));
+  --color-sky-300: rgb(var(--sky-300));
+  --color-sky-400: rgb(var(--sky-400));
+  --color-sky-500: rgb(var(--sky-500));
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --radius-sm: calc(var(--radius) - 4px);
@@ -126,7 +139,7 @@ body {
 }
 
 ::selection {
-  background: rgb(var(--amber-400) / 0.3);
+  background: rgb(var(--indigo-400) / 0.25);
   color: rgb(var(--foreground));
 }
 
@@ -142,7 +155,7 @@ body {
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--amber-500));
+  background: rgb(var(--indigo-500));
 }
 
 .bg-grid-pattern {
@@ -164,12 +177,26 @@ body {
   background-size: 1.5rem 1.5rem;
 }
 
+.gradient-text-primary {
+  background: linear-gradient(
+    135deg,
+    rgb(var(--indigo-600)),
+    rgb(var(--indigo-800)),
+    rgb(var(--indigo-600))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Keep backward compat alias */
 .gradient-text-gold {
   background: linear-gradient(
     135deg,
-    rgb(var(--amber-600)),
-    rgb(var(--gold-700)),
-    rgb(var(--amber-600))
+    rgb(var(--indigo-600)),
+    rgb(var(--indigo-800)),
+    rgb(var(--indigo-600))
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -177,12 +204,13 @@ body {
   color: transparent;
 }
 
+.dark .gradient-text-primary,
 .dark .gradient-text-gold {
   background: linear-gradient(
     135deg,
-    rgb(var(--amber-400)),
-    rgb(var(--gold-300)),
-    rgb(var(--amber-500))
+    rgb(var(--indigo-300)),
+    rgb(var(--sky-300)),
+    rgb(var(--indigo-400))
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -190,24 +218,36 @@ body {
   color: transparent;
 }
 
-.gradient-border-gold {
+.gradient-border-primary {
   position: relative;
   background: linear-gradient(rgb(var(--card)), rgb(var(--card))) padding-box,
-    linear-gradient(135deg, rgb(var(--amber-400)), rgb(var(--gold-600))) border-box;
+    linear-gradient(135deg, rgb(var(--indigo-400)), rgb(var(--emerald-400))) border-box;
   border: 1px solid transparent;
 }
 
-.glow-gold {
-  box-shadow:
-    0 0 20px rgb(var(--amber-400) / 0.3),
-    0 0 40px rgb(var(--amber-400) / 0.15);
+/* backward compat */
+.gradient-border-gold {
+  position: relative;
+  background: linear-gradient(rgb(var(--card)), rgb(var(--card))) padding-box,
+    linear-gradient(135deg, rgb(var(--indigo-400)), rgb(var(--emerald-400))) border-box;
+  border: 1px solid transparent;
 }
 
-.glow-gold-lg {
+.glow-primary {
   box-shadow:
-    0 0 40px rgb(var(--amber-400) / 0.4),
-    0 0 80px rgb(var(--amber-400) / 0.2);
+    0 0 20px rgb(var(--indigo-400) / 0.25),
+    0 0 40px rgb(var(--indigo-400) / 0.10);
 }
+
+.glow-primary-lg {
+  box-shadow:
+    0 0 40px rgb(var(--indigo-400) / 0.35),
+    0 0 80px rgb(var(--indigo-400) / 0.15);
+}
+
+/* backward compat */
+.glow-gold { box-shadow: 0 0 20px rgb(var(--indigo-400) / 0.25), 0 0 40px rgb(var(--indigo-400) / 0.10); }
+.glow-gold-lg { box-shadow: 0 0 40px rgb(var(--indigo-400) / 0.35), 0 0 80px rgb(var(--indigo-400) / 0.15); }
 
 .mask-radial-fade {
   -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
@@ -243,9 +283,15 @@ body {
   50% { transform: translateY(-12px); }
 }
 
+@keyframes pulse-primary {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(var(--indigo-400) / 0.4); }
+  50% { box-shadow: 0 0 0 12px rgb(var(--indigo-400) / 0); }
+}
+
+/* backward compat */
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgb(var(--amber-400) / 0.5); }
-  50% { box-shadow: 0 0 0 12px rgb(var(--amber-400) / 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgb(var(--indigo-400) / 0.4); }
+  50% { box-shadow: 0 0 0 12px rgb(var(--indigo-400) / 0); }
 }
 
 @keyframes meteor {
@@ -269,6 +315,7 @@ body {
 .animate-scroll-x { animation: scroll-x 40s linear infinite; }
 .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
 .animate-pulse-gold { animation: pulse-gold 2s ease-out infinite; }
+.animate-pulse-primary { animation: pulse-primary 2s ease-out infinite; }
 .animate-meteor { animation: meteor 5s linear infinite; }
 .animate-gradient { animation: gradient-shift 8s ease infinite; background-size: 200% 200%; }
 .animate-spotlight { animation: spotlight 2s ease 0.5s forwards; opacity: 0; }
@@ -276,7 +323,7 @@ body {
   background-image: linear-gradient(
     110deg,
     transparent 30%,
-    rgb(var(--amber-300) / 0.6) 50%,
+    rgb(var(--indigo-300) / 0.5) 50%,
     transparent 70%
   );
   background-size: 200% 100%;
