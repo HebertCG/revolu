@@ -2,7 +2,7 @@
 
 import { Container, SectionHeading } from "@/components/ui/container";
 import { CardHoverEffect } from "@/components/animated/card-hover-effect";
-import { Brain, Eye, Infinity as InfinityIcon } from "lucide-react";
+import { Brain, Eye, ShieldCheck } from "lucide-react";
 
 const items = [
   {
@@ -13,11 +13,11 @@ const items = [
     badge: "Anti-fraude",
   },
   {
-    title: "Simulacros UDEP/UPAO infinitos",
+    title: "Sistema estable y sobresaliente",
     description:
-      "Sube tus exámenes en Word. La IA genera variantes ilimitadas con el mismo nivel de dificultad. Tu banco de preguntas nunca se quema, los alumnos nunca repiten.",
-    icon: <InfinityIcon className="h-5 w-5" />,
-    badge: "Generativo",
+      "Arquitectura cloud de alta disponibilidad. Diseñado para soportar miles de alumnos concurrentes sin caídas ni lentitud, garantizando una experiencia educativa fluida 24/7.",
+    icon: <ShieldCheck className="h-5 w-5" />,
+    badge: "Alta disponibilidad",
   },
   {
     title: "Test vocacional con ML explicable",

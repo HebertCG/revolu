@@ -5,8 +5,7 @@ import { ProblemSolution } from "@/components/sections/problem-solution";
 import { Diferenciadores } from "@/components/sections/diferenciadores";
 import { BentoFeatures } from "@/components/sections/bento-features";
 import { ComoFunciona } from "@/components/sections/como-funciona";
-import { MotorSimulacros } from "@/components/sections/motor-simulacros";
-import { MultiTenant } from "@/components/sections/multi-tenant";
+import { SistemaEstable } from "@/components/sections/sistema-estable";
 import { Pricing } from "@/components/sections/pricing";
 import { Calculadora } from "@/components/sections/calculadora";
 import { Testimonios } from "@/components/sections/testimonios";
@@ -34,12 +33,11 @@ export default function Home() {
         <Diferenciadores />
         <BentoFeatures />
         <ComoFunciona />
-        <MotorSimulacros />
-        <MultiTenant />
+        <HechoEnPeru />
+        <SistemaEstable />
         <Pricing />
         <Calculadora />
         <Testimonios />
-        <HechoEnPeru />
         <FAQ />
         <CTAFinal />
       </main>
