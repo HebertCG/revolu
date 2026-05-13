@@ -47,14 +47,14 @@ export function CardHoverEffect({
               />
             )}
           </AnimatePresence>
-          <div className="relative z-10 h-full w-full overflow-hidden rounded-2xl border border-border bg-card p-6 transition-colors duration-200 group-hover:border-amber-400/50">
+          <div className="relative z-10 h-full w-full overflow-hidden rounded-2xl border border-border bg-card p-6 transition-colors duration-200 group-hover:border-indigo-400/50">
             {item.badge && (
-              <span className="mb-3 inline-flex items-center rounded-full border border-amber-400/40 bg-amber-400/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-amber-600 dark:text-amber-300">
+              <span className="mb-3 inline-flex items-center rounded-full border border-indigo-400/40 bg-indigo-400/10 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-indigo-600 dark:text-indigo-300">
                 {item.badge}
               </span>
             )}
             {item.icon && (
-              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-amber-950 shadow-[0_0_20px_-4px_rgb(245_158_11/0.5)]">
+              <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-400 to-indigo-600 text-white shadow-[0_0_20px_-4px_rgb(99_102_241/0.5)]">
                 {item.icon}
               </div>
             )}

@@ -170,10 +170,10 @@ export function Hero() {
             />
             {/* Friendly Students Illustration */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, x: -20, y: 20 }}
+              initial={{ opacity: 0, scale: 0.8, x: 20, y: -20 }}
               animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="absolute -bottom-16 -left-20 z-20 w-64 md:w-72 pointer-events-none drop-shadow-2xl"
+              className="absolute -top-16 -right-10 md:-right-24 z-20 w-48 md:w-64 pointer-events-none drop-shadow-2xl"
             >
               <img 
                 src="/students-illustration.png" 
