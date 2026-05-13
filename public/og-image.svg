@@ -2,19 +2,19 @@
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#08080b"/>
-      <stop offset="100%" stop-color="#1c1410"/>
+      <stop offset="100%" stop-color="#0e122b"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#fbbf24"/>
-      <stop offset="50%" stop-color="#fde68a"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
     </linearGradient>
     <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
     </radialGradient>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fbbf24" stroke-opacity="0.05" stroke-width="1"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#6366f1" stroke-opacity="0.05" stroke-width="1"/>
     </pattern>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
@@ -22,20 +22,20 @@
   <ellipse cx="600" cy="315" rx="500" ry="200" fill="url(#glow)"/>
 
   <g transform="translate(80, 80)">
-    <rect width="64" height="64" rx="14" fill="url(#gold)"/>
-    <text x="32" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="800" fill="#451a03" text-anchor="middle">R</text>
+    <rect width="64" height="64" rx="14" fill="url(#primary)"/>
+    <text x="32" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="800" fill="#ffffff" text-anchor="middle">K</text>
   </g>
 
-  <text x="80" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="92" font-weight="700" fill="url(#gold)" letter-spacing="-3">REVOLU</text>
+  <text x="80" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="92" font-weight="700" fill="url(#primary)" letter-spacing="-3">Klassia</text>
   <text x="80" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="500" fill="#fafaf9" letter-spacing="-1">Intranet con IA para academias</text>
   <text x="80" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="500" fill="#fafaf9" letter-spacing="-1">preuniversitarias</text>
 
   <text x="80" y="490" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#a1a1aa">Proctoring · Simulacros UDEP/UPAO · Test vocacional ML</text>
 
   <g transform="translate(80, 540)">
-    <rect width="220" height="48" rx="24" fill="url(#gold)"/>
-    <text x="110" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#451a03" text-anchor="middle">Pedir demo gratis →</text>
+    <rect width="220" height="48" rx="24" fill="url(#primary)"/>
+    <text x="110" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Pedir demo gratis →</text>
   </g>
 
-  <text x="1120" y="600" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#71717a" text-anchor="end">revolu.pe · Piura, Perú</text>
+  <text x="1120" y="600" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#71717a" text-anchor="end">klassia.pe · Piura, Perú</text>
 </svg>
