@@ -1,41 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#08080b"/>
-      <stop offset="100%" stop-color="#0e122b"/>
-    </linearGradient>
-    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#818cf8"/>
-      <stop offset="50%" stop-color="#6366f1"/>
-      <stop offset="100%" stop-color="#4f46e5"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#6366f1" stroke-opacity="0.05" stroke-width="1"/>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#0A0E1F" stroke-opacity="0.05" stroke-width="1"/>
     </pattern>
+    <radialGradient id="halo" cx="80%" cy="20%" r="55%">
+      <stop offset="0%" stop-color="#FF7857" stop-opacity="0.18"/>
+      <stop offset="60%" stop-color="#2B5BFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <rect width="1200" height="630" fill="#FFFFFF"/>
   <rect width="1200" height="630" fill="url(#grid)"/>
-  <ellipse cx="600" cy="315" rx="500" ry="200" fill="url(#glow)"/>
+  <rect width="1200" height="630" fill="url(#halo)"/>
 
-  <g transform="translate(80, 80)">
-    <rect width="64" height="64" rx="14" fill="url(#primary)"/>
-    <text x="32" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="800" fill="#ffffff" text-anchor="middle">K</text>
+  <!-- Editorial rule -->
+  <line x1="80" y1="118" x2="1120" y2="118" stroke="#0A0E1F" stroke-opacity="0.16" stroke-width="1"/>
+  <text x="80" y="100" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="20" font-weight="600" fill="#0A0E1F" letter-spacing="3">§00</text>
+  <text x="160" y="100" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="20" fill="#4B5168" letter-spacing="3">INICIO / KLASSIA</text>
+  <text x="1120" y="100" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="20" fill="#4B5168" letter-spacing="3" text-anchor="end">PIURA, PERÚ</text>
+
+  <!-- Logo K) -->
+  <g transform="translate(80, 170)">
+    <rect width="80" height="80" rx="18" fill="#0A0E1F"/>
+    <path
+      d="M22 19 L22 61 M22 40 L48 19 M22 40 L48 61 M56 19 L66 40 L56 61"
+      stroke="#F6F2E9"
+      stroke-width="6.4"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
   </g>
+  <text x="184" y="226" font-family="Inter, system-ui, sans-serif" font-size="38" font-weight="600" fill="#0A0E1F" letter-spacing="-1">Klassia</text>
 
-  <text x="80" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="92" font-weight="700" fill="url(#primary)" letter-spacing="-3">Klassia</text>
-  <text x="80" y="350" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="500" fill="#fafaf9" letter-spacing="-1">Intranet con IA para academias</text>
-  <text x="80" y="400" font-family="system-ui, -apple-system, sans-serif" font-size="40" font-weight="500" fill="#fafaf9" letter-spacing="-1">preuniversitarias</text>
+  <!-- Headline -->
+  <text x="80" y="340" font-family="Inter, system-ui, sans-serif" font-size="80" font-weight="600" fill="#0A0E1F" letter-spacing="-3.5">El sistema</text>
+  <text x="80" y="425" font-family="Inter, system-ui, sans-serif" font-size="80" font-weight="600" fill="#0A0E1F" letter-spacing="-3.5">
+    <tspan font-family="'Instrument Serif', Georgia, serif" font-style="italic" font-weight="400" fill="#1A33C7">operativo</tspan>
+    <tspan> para las academias</tspan>
+  </text>
+  <text x="80" y="510" font-family="Inter, system-ui, sans-serif" font-size="80" font-weight="600" fill="#0A0E1F" letter-spacing="-3.5">del futuro<tspan fill="#FF7857">.</tspan></text>
+  <path d="M80 525 C 240 510, 480 510, 690 525" stroke="#FF7857" stroke-width="6" stroke-linecap="round" fill="none"/>
 
-  <text x="80" y="490" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#a1a1aa">Proctoring · Simulacros UDEP/UPAO · Test vocacional ML</text>
-
-  <g transform="translate(80, 540)">
-    <rect width="220" height="48" rx="24" fill="url(#primary)"/>
-    <text x="110" y="32" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Pedir demo gratis →</text>
-  </g>
-
-  <text x="1120" y="600" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#71717a" text-anchor="end">klassia.pe · Piura, Perú</text>
+  <!-- Footer meta -->
+  <text x="80" y="585" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="#4B5168" letter-spacing="2.4">PROCTORING IA · VOCACIONAL ML · 12 MÓDULOS</text>
+  <text x="1120" y="585" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="#4B5168" letter-spacing="2.4" text-anchor="end">KLASSIA.PE</text>
 </svg>
