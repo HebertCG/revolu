@@ -54,18 +54,17 @@ export function Tilt3D({
 
   const glareBg = useMotionTemplate`radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.35), transparent 55%)`;
 
-  // True while the user is actively touching or dragging the card.
-  // Pauses the auto-sway loop so manual control wins on touch devices.
+  // True while the user is actively pointing at or touching the card.
+  // The auto-sway loop pauses then so manual control wins.
   const interacting = useRef(false);
   const resumeTimer = useRef<number | undefined>(undefined);
 
-  // On touch devices (no hover), run a slow autonomous 3D sway so the
-  // mockup feels alive without a cursor. Desktop keeps the static rest.
+  // Continuous idle sway. Runs on every device (desktop, mobile, Safari)
+  // so the dashboard always feels alive. Pauses while a cursor is over
+  // it or a finger is dragging it.
   useEffect(() => {
     if (reduce) return;
     if (typeof window === "undefined") return;
-    const isTouch = window.matchMedia("(hover: none)").matches;
-    if (!isTouch) return;
 
     let raf = 0;
     const startedAt = performance.now();
@@ -73,12 +72,12 @@ export function Tilt3D({
     const loop = (t: number) => {
       if (!interacting.current) {
         const e = (t - startedAt) / 1000;
-        // Lissajous-ish sway, gentle amplitudes
-        rotateY.set(defaultRotateY + Math.sin(e * 0.5) * 10);
-        rotateX.set(defaultRotateX + Math.cos(e * 0.4) * 6);
-        rotateZ.set(defaultRotateZ + Math.sin(e * 0.3) * 1.2);
-        glareX.set(50 + Math.sin(e * 0.5) * 35);
-        glareY.set(50 + Math.cos(e * 0.4) * 25);
+        // Subtle drift, gentle amplitudes so it doesn't distract while reading
+        rotateY.set(defaultRotateY + Math.sin(e * 0.35) * 7);
+        rotateX.set(defaultRotateX + Math.cos(e * 0.28) * 4.5);
+        rotateZ.set(defaultRotateZ + Math.sin(e * 0.22) * 0.9);
+        glareX.set(50 + Math.sin(e * 0.35) * 30);
+        glareY.set(50 + Math.cos(e * 0.28) * 22);
       }
       raf = requestAnimationFrame(loop);
     };
@@ -107,17 +106,19 @@ export function Tilt3D({
     glareY.set(py * 100);
   }
 
+  function onMouseEnter() {
+    interacting.current = true;
+  }
+
   function onMove(e: RMouseEvent<HTMLDivElement>) {
     if (reduce) return;
     applyFromPoint(e.currentTarget.getBoundingClientRect(), e.clientX, e.clientY);
   }
 
-  function onLeave() {
-    rotateY.set(defaultRotateY);
-    rotateX.set(defaultRotateX);
-    rotateZ.set(defaultRotateZ);
-    glareX.set(35);
-    glareY.set(20);
+  function onMouseLeave() {
+    // Hand control back to the idle sway loop. The springs glide from
+    // their last cursor-driven position into the auto-sway smoothly.
+    interacting.current = false;
   }
 
   function onTouchStart() {
@@ -136,8 +137,6 @@ export function Tilt3D({
   }
 
   function onTouchEnd() {
-    // Resume the auto-sway after a short pause so the user keeps feeling
-    // in control right after lifting their finger.
     resumeTimer.current = window.setTimeout(() => {
       interacting.current = false;
     }, 1200);
@@ -149,8 +148,9 @@ export function Tilt3D({
     <div
       className={`relative ${className}`}
       style={perspective}
+      onMouseEnter={onMouseEnter}
       onMouseMove={onMove}
-      onMouseLeave={onLeave}
+      onMouseLeave={onMouseLeave}
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}

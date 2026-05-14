@@ -368,79 +368,112 @@ h1, h2, h3 { letter-spacing: -0.025em; }
 .step-card { transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms, background 300ms; }
 .step-card:hover { transform: translateY(-3px); }
 
-/* ===== Mobile / touch device animations =====
-   Hover-driven effects (cursor spotlight, magnetic glow, card lift) do
-   not fire on touch screens, so the page feels static there. This block
-   replaces those with always-on subtle motion so the experience feels
-   alive on phones and tablets too. */
+/* ===== Always-on idle animations =====
+   These run on every device (Chrome, Safari, Firefox, iOS, Android) so
+   the page feels alive without requiring a hover. Hover/touch handlers
+   still take over for explicit interaction. */
 
+@-webkit-keyframes spot-orbit {
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
 @keyframes spot-orbit {
-  to { transform: rotate(360deg); }
+  from { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
 }
 
+@-webkit-keyframes soft-shine {
+  from { -webkit-transform: translateX(-120%) skewX(-12deg); transform: translateX(-120%) skewX(-12deg); }
+  to { -webkit-transform: translateX(220%) skewX(-12deg); transform: translateX(220%) skewX(-12deg); }
+}
 @keyframes soft-shine {
-  0% { transform: translateX(-120%) skewX(-12deg); }
-  100% { transform: translateX(220%) skewX(-12deg); }
+  from { -webkit-transform: translateX(-120%) skewX(-12deg); transform: translateX(-120%) skewX(-12deg); }
+  to { -webkit-transform: translateX(220%) skewX(-12deg); transform: translateX(220%) skewX(-12deg); }
 }
 
-@keyframes breathe {
-  0%, 100% { transform: scale(1); box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 1px 2px rgba(10,14,31,0.12); }
-  50% { transform: scale(1.015); box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 6px 18px -8px rgba(43,91,255,0.35); }
+@-webkit-keyframes float-soft {
+  0%, 100% { -webkit-transform: translateY(0); transform: translateY(0); }
+  50% { -webkit-transform: translateY(-5px); transform: translateY(-5px); }
 }
-
 @keyframes float-soft {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  0%, 100% { -webkit-transform: translateY(0); transform: translateY(0); }
+  50% { -webkit-transform: translateY(-5px); transform: translateY(-5px); }
 }
+
+@-webkit-keyframes breathe-glow {
+  0%, 100% { box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 1px 2px rgba(10,14,31,0.12); }
+  50% { box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 8px 24px -10px rgba(43,91,255,0.45); }
+}
+@keyframes breathe-glow {
+  0%, 100% { box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 1px 2px rgba(10,14,31,0.12); }
+  50% { box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 8px 24px -10px rgba(43,91,255,0.45); }
+}
+
+/* Dashboard window floats gently on all devices. */
+.dash-window {
+  -webkit-animation: float-soft 7s ease-in-out infinite;
+  animation: float-soft 7s ease-in-out infinite;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Primary CTA breathes a soft cobalt glow on all devices. */
+.btn-primary {
+  -webkit-animation: breathe-glow 4.2s ease-in-out infinite;
+  animation: breathe-glow 4.2s ease-in-out infinite;
+}
+.btn-primary:hover {
+  -webkit-animation: none;
+  animation: none;
+}
+
+/* Process step-04 dark card always shows the diagonal shine sweep. */
+.step-card.card-dark {
+  position: relative;
+  overflow: hidden;
+}
+.step-card.card-dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40%;
+  background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  -webkit-animation: soft-shine 5s ease-in-out infinite;
+  animation: soft-shine 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ===== Touch-only enhancements =====
+   Cursor-based effects (hover spotlight, magnetic glow) never fire on
+   phones/tablets — replace them with always-visible equivalents. */
 
 @media (hover: none) {
-  /* Cards: replace the hover-only spotlight with a slow rotating
-     conic shimmer so every card has a quiet living quality. */
   .spot::before {
     opacity: 1;
     background:
       conic-gradient(
         from 0deg,
         transparent 0deg,
-        rgba(43, 91, 255, 0.05) 60deg,
+        rgba(43, 91, 255, 0.06) 60deg,
         transparent 130deg,
-        rgba(255, 120, 87, 0.045) 200deg,
+        rgba(255, 120, 87, 0.05) 200deg,
         transparent 280deg
       );
+    -webkit-animation: spot-orbit 22s linear infinite;
     animation: spot-orbit 22s linear infinite;
   }
 
-  /* Magnetic CTAs: gentle always-on conic glow instead of hover-only. */
   .btn-magnetic-glow::after {
-    opacity: 0.45;
+    opacity: 0.5;
   }
 
-  /* Touch feedback: cards lift on tap so the press feels physical. */
   .card:active {
+    -webkit-transform: translateY(-2px);
     transform: translateY(-2px);
     border-color: var(--line-strong);
     box-shadow: 0 12px 32px -16px rgba(10, 14, 31, 0.18);
-  }
-
-  /* Mockup window keeps a subtle floating idle motion. */
-  .dash-window {
-    animation: float-soft 7s ease-in-out infinite;
-  }
-
-  /* Step cards in process: shine sweep on the dark step-04 card. */
-  .step-card.card-dark {
-    position: relative;
-    overflow: hidden;
-  }
-  .step-card.card-dark::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 40%;
-    background: linear-gradient(110deg, transparent, rgba(255, 255, 255, 0.07), transparent);
-    animation: soft-shine 4.5s ease-in-out infinite;
-    pointer-events: none;
   }
 }
 
