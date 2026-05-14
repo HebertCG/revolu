@@ -34,15 +34,15 @@ export const metadata: Metadata = {
   description:
     "Gestiona alumnos, evita fraudes con IA y aumenta tus matrículas con la plataforma educativa más avanzada del mercado. Proctoring con IA, test vocacional ML y 12 módulos integrados.",
   keywords: [
-    "plataforma educativa",
-    "intranet academia",
-    "proctoring IA",
+    "plataforma educativa Perú",
+    "intranet academia Piura",
+    "proctoring IA Perú",
     "test vocacional ML",
-    "EdTech LATAM",
+    "EdTech Piura",
     "Klassia",
     "academia Perú",
-    "academia Colombia",
-    "academia México",
+    "academia Piura",
+    "preuniversitario Piura",
   ],
   authors: [{ name: "Klassia" }],
   creator: "Klassia",
@@ -101,11 +101,11 @@ const jsonLd = {
       url: "https://klassia.pe",
       logo: "https://klassia.pe/favicon.svg",
       description:
-        "Plataforma educativa con IA para academias, colegios e institutos en LATAM.",
+        "Plataforma educativa con IA hecha en Piura, Perú para academias, colegios e institutos.",
       address: {
         "@type": "PostalAddress",
         addressCountry: "PE",
-        addressRegion: "Lima",
+        addressRegion: "Piura",
       },
     },
     {

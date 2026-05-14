@@ -59,9 +59,6 @@ export function Nav() {
             <span className="text-[15px] font-semibold tracking-tight text-ink">
               Klassia
             </span>
-            <span className="ml-1 hidden font-mono text-[10px] text-ink-soft sm:inline">
-              v2.6
-            </span>
           </a>
 
           <nav className="hidden items-center gap-7 text-[13px] text-ink-soft md:flex">

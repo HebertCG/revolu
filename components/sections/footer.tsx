@@ -93,12 +93,12 @@ export function Footer() {
                 Contacto
               </div>
               <ul className="space-y-2 text-[13px] text-white/75">
-                <li>hola@klassia.io</li>
-                <li>+51 1 700 0000</li>
-                <li>Lima · Bogotá · CDMX</li>
+                <li>hola@klassia.pe</li>
+                <li>Piura · Perú</li>
+                <li>Hecho en casa, con manos peruanas</li>
                 <li className="flex items-center gap-1.5 text-mint-500">
                   <span className="pulse-mint h-1.5 w-1.5 rounded-full" />
-                  Todos los sistemas operativos
+                  Sistemas operativos
                 </li>
               </ul>
             </div>

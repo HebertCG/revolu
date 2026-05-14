@@ -47,7 +47,7 @@ export function CTA() {
               className="mt-8 max-w-xl text-[16px] leading-relaxed text-ink-soft md:text-[18px]"
             >
               Agenda una demo guiada de 30 minutos. Migramos tus alumnos, cursos
-              y exámenes — sin costo, en menos de una semana.
+              y exámenes — sin costo, en menos de quince días.
             </Reveal>
             <Reveal delay={200} className="mt-9 flex flex-wrap items-center gap-3">
               <a
@@ -88,33 +88,33 @@ export function CTA() {
           <Reveal delay={300} className="md:col-span-4">
             <div className="card card-cream rounded-3xl p-6">
               <div className="mb-3 font-mono text-[10px] uppercase tracking-wider text-ink-soft">
-                PRÓXIMA DEMO ABIERTA
+                AGENDA TU DEMO
               </div>
               <div className="font-serif-italic text-[38px] leading-none text-ink">
-                jueves
+                cuando
                 <br />
-                16 may.
+                tú quieras.
               </div>
               <div className="mt-2 font-mono text-[12px] text-ink-soft">
-                11:00 — 11:30 (GMT-5)
+                30 min · personalizada · GMT-5
               </div>
               <div className="dashed-h my-5 h-px" />
               <div className="mb-2 text-[12px] text-ink-soft">
-                Cupos disponibles
+                Disponibilidad esta semana
               </div>
               <div className="flex items-center gap-1">
                 {Array.from({ length: 8 }).map((_, i) => (
                   <span
                     key={i}
                     className={`h-2 flex-1 rounded-sm ${
-                      i < 5 ? "bg-cobalt-500" : "bg-[color:var(--line)]"
+                      i < 6 ? "bg-cobalt-500" : "bg-[color:var(--line)]"
                     }`}
                   />
                 ))}
               </div>
               <div className="mt-2 flex justify-between font-mono text-[11px] text-ink-soft">
-                <span>5/8 confirmados</span>
-                <span className="text-coral-600">3 libres</span>
+                <span>Cupos abiertos</span>
+                <span className="text-mint-700">flexible</span>
               </div>
             </div>
           </Reveal>

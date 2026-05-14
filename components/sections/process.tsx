@@ -86,11 +86,11 @@ const steps: Step[] = [
   {
     n: "04",
     tag: "Lanzamiento",
-    title: "En vivo en menos de 7 días.",
+    title: "En vivo en menos de 15 días.",
     desc: "Tu landing pública, tus grupos y tu primer examen con proctoring corriendo en producción.",
     mini: (
       <div className="flex items-center justify-between rounded-lg border border-cobalt-700 bg-ink px-3 py-2.5 font-mono text-[11px] text-white">
-        <span className="opacity-70">Día 7 · 12:00</span>
+        <span className="opacity-70">Día 15 · 12:00</span>
         <span className="flex items-center gap-1.5">
           <span className="pulse-mint h-1.5 w-1.5 rounded-full" />
           LIVE
@@ -129,19 +129,19 @@ export function Process() {
                 Promesa
               </div>
               <div className="text-[28px] font-semibold leading-tight tracking-tight">
-                7 días o{" "}
+                15 días o{" "}
                 <span className="font-serif-italic text-coral-500">gratis</span>
                 .
               </div>
               <p className="mt-3 text-[13px] leading-relaxed text-ink-soft">
-                Si no estás operando en producción al séptimo día, devolvemos
+                Si no estás operando en producción al día quince, devolvemos
                 cualquier pago y te ayudamos a volver a tu sistema anterior.
               </p>
               <div className="dashed-h my-5 h-px" />
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <div className="num-mono text-[24px] font-semibold leading-none">
-                    <NumberTicker value={7} />
+                    <NumberTicker value={15} />
                   </div>
                   <div className="mt-1 font-mono text-[10px] uppercase tracking-wider text-ink-soft">
                     días promedio
