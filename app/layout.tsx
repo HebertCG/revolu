@@ -1,42 +1,48 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollProgress } from "@/components/animated/scroll-progress";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
   subsets: ["latin"],
   display: "swap",
+  weight: ["400"],
+  style: ["normal", "italic"],
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://klassia.pe"),
   title: {
-    default: "Klassia — La plataforma educativa que transforma tu academia",
+    default: "Klassia — El sistema operativo para las academias del futuro",
     template: "%s · Klassia",
   },
   description:
-    "Gestión académica, proctoring con IA, test vocacional ML y simulacros UDEP/UPAO ilimitados. Klassia es la intranet que las academias líderes del norte del Perú ya están usando.",
+    "Gestiona alumnos, evita fraudes con IA y aumenta tus matrículas con la plataforma educativa más avanzada del mercado. Proctoring con IA, test vocacional ML y 12 módulos integrados.",
   keywords: [
-    "plataforma educativa Perú",
+    "plataforma educativa",
     "intranet academia",
-    "preuniversitario Perú",
     "proctoring IA",
-    "simulacros UDEP",
-    "simulacros UPAO",
-    "test vocacional",
-    "EdTech Perú",
-    "academia Piura",
-    "academia Trujillo",
-    "academia Chiclayo",
+    "test vocacional ML",
+    "EdTech LATAM",
     "Klassia",
+    "academia Perú",
+    "academia Colombia",
+    "academia México",
   ],
   authors: [{ name: "Klassia" }],
   creator: "Klassia",
@@ -46,9 +52,9 @@ export const metadata: Metadata = {
     locale: "es_PE",
     url: "https://klassia.pe",
     siteName: "Klassia",
-    title: "Klassia — La plataforma educativa que transforma tu academia",
+    title: "Klassia — El sistema operativo para las academias del futuro",
     description:
-      "Gestión académica completa con IA. Proctoring, simulacros UDEP/UPAO y test vocacional ML en una sola plataforma.",
+      "Doce módulos integrados, una sola base de datos. Proctoring con IA, vocacional ML y exámenes con KaTeX.",
     images: [
       {
         url: "/og-image.svg",
@@ -60,9 +66,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Klassia — La plataforma educativa que transforma tu academia",
+    title: "Klassia — El sistema operativo para las academias del futuro",
     description:
-      "Proctoring, simulacros UDEP/UPAO y test vocacional ML. Todo en una sola plataforma educativa.",
+      "Proctoring con IA, vocacional ML y 12 módulos integrados. Migración gratis.",
     images: ["/og-image.svg"],
   },
   robots: {
@@ -76,17 +82,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
-    { media: "(prefers-color-scheme: dark)", color: "#080a14" },
-  ],
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
 };
@@ -100,11 +101,11 @@ const jsonLd = {
       url: "https://klassia.pe",
       logo: "https://klassia.pe/favicon.svg",
       description:
-        "Plataforma educativa con IA para academias preuniversitarias del norte del Perú.",
+        "Plataforma educativa con IA para academias, colegios e institutos en LATAM.",
       address: {
         "@type": "PostalAddress",
         addressCountry: "PE",
-        addressRegion: "Piura",
+        addressRegion: "Lima",
       },
     },
     {
@@ -130,8 +131,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
       <head>
         <script
@@ -139,16 +139,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-background text-foreground antialiased">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <ScrollProgress />
-          {children}
-        </ThemeProvider>
+      <body className="grain min-h-screen bg-paper text-ink antialiased">
+        <ScrollProgress />
+        {children}
       </body>
     </html>
   );
