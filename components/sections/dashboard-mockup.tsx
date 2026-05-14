@@ -1,321 +1,378 @@
 "use client";
 
-const sidebar: Array<[string, boolean, boolean?]> = [
-  ["Vista general", true, false],
-  ["Alumnos", false, false],
-  ["Grupos", false, false],
-  ["Exámenes", false, false],
-  ["Proctoring", false, true],
-  ["Vocacional", false, false],
-  ["Materiales", false, false],
+import {
+  ArrowRight,
+  BookOpen,
+  Calendar,
+  ClipboardList,
+  GraduationCap,
+  Home,
+  type LucideIcon,
+  LogOut,
+  PieChart,
+  Sparkles,
+  TrendingUp,
+} from "lucide-react";
+
+const sidebarItems: { icon: LucideIcon; label: string; active?: boolean }[] = [
+  { icon: Home, label: "Dashboard", active: true },
+  { icon: Calendar, label: "Horario" },
+  { icon: ClipboardList, label: "Asistencia" },
+  { icon: BookOpen, label: "Materiales" },
+  { icon: GraduationCap, label: "Exámenes" },
+  { icon: Sparkles, label: "Test vocacional" },
 ];
 
-const cycles: Array<[string, string]> = [
-  ["Anual", "1,280"],
-  ["Verano", "412"],
-  ["Intensivo", "304"],
-];
-
-type Kpi = {
-  k: string;
-  v: string;
-  d: string;
-  color: "cobalt" | "ink" | "mint" | "coral";
-};
-
-const kpis: Kpi[] = [
-  { k: "Matrículas hoy", v: "+124", d: "+18%", color: "cobalt" },
-  { k: "Alumnos activos", v: "4,812", d: "+2.1%", color: "ink" },
-  { k: "Exámenes en curso", v: "37", d: "live", color: "mint" },
-  { k: "Alertas IA", v: "2", d: "revisar", color: "coral" },
-];
-
-const attendance = [60, 75, 82, 68, 90, 84, 78, 92, 88, 70, 86, 94, 80, 76];
-
-const vocacional: Array<[string, number, "cobalt" | "coral" | "sun"]> = [
-  ["Ing. Sistemas", 87, "cobalt"],
-  ["Diseño UX", 71, "coral"],
-  ["Arquitectura", 58, "sun"],
+const courses = [
+  {
+    name: "Razonamiento Matemático",
+    professor: "Hebert Cornejo",
+    initials: "HC",
+    icon: BookOpen,
+  },
+  {
+    name: "Razonamiento Verbal",
+    professor: "Prof. Carrillo",
+    initials: "PC",
+    icon: GraduationCap,
+  },
+  {
+    name: "Álgebra · Aritmética",
+    professor: "Armando Alama",
+    initials: "AA",
+    icon: Sparkles,
+  },
+  {
+    name: "Geometría",
+    professor: "Prof. Modesto",
+    initials: "PM",
+    icon: ClipboardList,
+  },
 ];
 
 export function DashboardMockup() {
   return (
-    <div className="dash-window mx-auto w-full max-w-[1120px] overflow-hidden">
-      {/* Window chrome */}
-      <div className="flex items-center justify-between border-b border-[color:var(--line)] bg-[color:var(--cream)] px-4 py-3">
-        <div className="flex items-center gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-coral-500" />
-          <span className="h-2.5 w-2.5 rounded-full bg-sun-500" />
-          <span className="h-2.5 w-2.5 rounded-full bg-mint-500" />
-        </div>
-        <div className="font-mono text-[11px] tracking-wider text-ink-soft">
-          app.klassia.io <span className="opacity-30">/</span> dashboard
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="flex items-center gap-1.5 font-mono text-[10px] text-ink">
-            <span className="pulse-mint h-1.5 w-1.5 rounded-full" />
-            EN VIVO
-          </span>
-        </div>
-      </div>
-
-      {/* Body grid */}
-      <div className="grid grid-cols-12 bg-paper">
-        {/* Sidebar */}
-        <aside className="col-span-2 hidden border-r border-[color:var(--line)] p-4 md:block">
-          <div className="mb-3 font-mono text-[10px] tracking-wider text-ink-soft">
-            PANEL
+    <div className="relative rounded-2xl border border-slate-200 bg-white/90 p-2 shadow-2xl backdrop-blur-md">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-indigo-400/10"
+      />
+      <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+        {/* Window chrome */}
+        <div className="flex items-center gap-2 border-b border-slate-200 bg-slate-50 px-4 py-2.5">
+          <div className="flex gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-rose-400/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-amber-400/80" />
+            <span className="h-2.5 w-2.5 rounded-full bg-emerald-400/80" />
           </div>
-          {sidebar.map(([label, active, live], i) => (
-            <div
-              key={i}
-              className={`mb-0.5 flex items-center justify-between rounded-md px-2.5 py-1.5 text-[12px] ${
-                active
-                  ? "bg-cobalt-50 font-medium text-cobalt-700"
-                  : "text-ink-soft"
-              }`}
-            >
-              <span>{label}</span>
-              {live && <span className="pulse-mint h-1.5 w-1.5 rounded-full" />}
-            </div>
-          ))}
-          <div className="mt-6 border-t border-[color:var(--line)] pt-4">
-            <div className="mb-2 font-mono text-[10px] tracking-wider text-ink-soft">
-              CICLOS
-            </div>
-            {cycles.map(([k, v], i) => (
-              <div key={i} className="mb-1 flex justify-between text-[11px]">
-                <span className="text-ink-soft">{k}</span>
-                <span className="font-mono">{v}</span>
+          <div className="ml-3 flex items-center gap-1.5 rounded-md border border-slate-200 bg-white px-2.5 py-1 text-[10px] text-slate-500">
+            <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
+            intranet.andinos-piura.klassia.pe
+          </div>
+        </div>
+
+        <div className="grid grid-cols-12 gap-0">
+          {/* Sidebar — dark intranet */}
+          <aside className="col-span-3 hidden flex-col bg-slate-950 p-3 text-slate-200 md:flex md:min-h-[460px]">
+            <div className="mb-4 flex items-center gap-2 px-2">
+              <span className="grid h-7 w-7 place-items-center rounded-md bg-gradient-to-br from-indigo-400 to-indigo-600 text-xs font-bold text-white">
+                K
+              </span>
+              <div className="leading-tight">
+                <p className="text-[10px] font-semibold tracking-wide text-white">
+                  Andinos Piura
+                </p>
+                <p className="text-[8px] uppercase tracking-wider text-slate-400">
+                  Intranet
+                </p>
               </div>
-            ))}
-          </div>
-        </aside>
+            </div>
 
-        {/* Main */}
-        <main className="col-span-12 p-5 md:col-span-10">
-          {/* KPI row */}
-          <div className="mb-5 grid grid-cols-2 gap-3 md:grid-cols-4">
-            {kpis.map((kpi, i) => (
-              <div
-                key={i}
-                className="rounded-xl border border-[color:var(--line)] p-3"
-              >
-                <div className="font-mono text-[10px] uppercase tracking-wider text-ink-soft">
-                  {kpi.k}
+            <div className="mb-4 rounded-lg border border-slate-800 bg-slate-900 p-2">
+              <div className="flex items-center gap-2">
+                <div className="grid h-7 w-7 place-items-center rounded-full bg-gradient-to-br from-indigo-400 to-indigo-600 text-[9px] font-bold text-white">
+                  AZ
                 </div>
-                <div className="mt-1 flex items-baseline gap-2">
-                  <div className="num-mono text-2xl font-semibold tracking-tight">
-                    {kpi.v}
-                  </div>
+                <div className="min-w-0">
+                  <p className="truncate text-[10px] font-medium text-slate-100">
+                    Adrianzen Zapata Kri…
+                  </p>
+                  <p className="flex items-center gap-1 text-[8px] text-indigo-300">
+                    <span className="h-1 w-1 rounded-full bg-indigo-400" />
+                    Estudiante
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <ul className="space-y-0.5">
+              {sidebarItems.map(({ icon: Icon, label, active }) => (
+                <li key={label}>
                   <div
-                    className={`font-mono text-[10px] ${
-                      kpi.color === "coral"
-                        ? "text-coral-600"
-                        : kpi.color === "mint"
-                          ? "text-mint-700"
-                          : kpi.color === "cobalt"
-                            ? "text-cobalt-700"
-                            : "text-ink-soft"
-                    }`}
+                    className={
+                      active
+                        ? "flex items-center justify-between gap-2 rounded-md bg-indigo-500/15 px-2 py-1.5 text-[10px] font-medium text-indigo-300 ring-1 ring-indigo-500/25"
+                        : "flex items-center gap-2 rounded-md px-2 py-1.5 text-[10px] text-slate-400 hover:text-slate-200"
+                    }
                   >
-                    {kpi.d}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Chart + proctoring */}
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-5">
-            <div className="relative overflow-hidden rounded-xl border border-[color:var(--line)] p-4 md:col-span-3">
-              <div className="mb-3 flex items-center justify-between">
-                <div>
-                  <div className="font-mono text-[11px] uppercase tracking-wider text-ink-soft">
-                    Matrículas · últimos 90d
-                  </div>
-                  <div className="mt-0.5 num-mono text-base font-semibold">
-                    2,847{" "}
-                    <span className="text-sm font-normal text-ink-soft">
-                      nuevas
+                    <span className="inline-flex items-center gap-2">
+                      <Icon className="h-3 w-3" />
+                      {label}
                     </span>
+                    {active && <ArrowRight className="h-2.5 w-2.5" />}
                   </div>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-auto pt-3">
+              <div className="flex items-center gap-2 rounded-md px-2 py-1.5 text-[10px] text-slate-400">
+                <LogOut className="h-3 w-3" />
+                Cerrar sesión
+              </div>
+            </div>
+          </aside>
+
+          {/* Main */}
+          <main className="col-span-12 bg-white p-4 md:col-span-9 md:p-5">
+            {/* Header row: greeting + próxima clase */}
+            <div className="grid gap-3 md:grid-cols-3">
+              <div className="rounded-xl border border-indigo-100 bg-gradient-to-br from-indigo-50/80 to-sky-50/40 p-4 md:col-span-2">
+                <h3 className="text-xl font-semibold tracking-tight text-slate-900">
+                  Hola,{" "}
+                  <span className="text-indigo-600">Adrianzen</span>
+                </h3>
+                <div className="mt-2 inline-flex items-center gap-1 rounded-md border border-slate-200 bg-white/70 px-2 py-0.5 text-[10px] text-slate-500">
+                  <Calendar className="h-2.5 w-2.5" />
+                  Viernes, 08/05/2026
                 </div>
-                <div className="flex items-center gap-1 font-mono text-[10px]">
-                  <span className="rounded border border-[color:var(--line)] px-1.5 py-0.5 text-ink-soft">
-                    30D
-                  </span>
-                  <span className="rounded bg-ink px-1.5 py-0.5 text-white">
-                    90D
-                  </span>
-                  <span className="rounded border border-[color:var(--line)] px-1.5 py-0.5 text-ink-soft">
-                    1A
-                  </span>
+
+                <div className="mt-4 grid grid-cols-3 gap-2">
+                  <StatPill
+                    label="Cursos"
+                    value="4"
+                    tone="indigo"
+                    icon={BookOpen}
+                  />
+                  <StatPill
+                    label="Hoy"
+                    value="1 clase"
+                    tone="sky"
+                    icon={Calendar}
+                  />
+                  <StatPill
+                    label="Asistencia"
+                    value="100%"
+                    tone="emerald"
+                    icon={TrendingUp}
+                  />
                 </div>
               </div>
-              <svg viewBox="0 0 400 130" className="h-32 w-full">
-                <defs>
-                  <linearGradient id="gFill" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#2B5BFF" stopOpacity="0.18" />
-                    <stop offset="100%" stopColor="#2B5BFF" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                {[0, 32, 64, 96, 128].map((y, i) => (
-                  <line
-                    key={i}
-                    x1="0"
-                    x2="400"
-                    y1={y}
-                    y2={y}
-                    stroke="rgba(10,14,31,0.05)"
-                  />
-                ))}
-                <path
-                  d="M0,95 L25,88 L50,92 L75,75 L100,80 L125,65 L150,68 L175,52 L200,58 L225,42 L250,50 L275,38 L300,44 L325,28 L350,32 L375,20 L400,24"
-                  fill="none"
-                  stroke="#1E3FE6"
-                  strokeWidth="2.2"
-                  className="spark-path"
+
+              {/* Próxima clase highlight */}
+              <div className="relative overflow-hidden rounded-xl bg-gradient-to-br from-indigo-500 via-indigo-600 to-indigo-700 p-4 text-indigo-50 shadow-[0_8px_30px_-12px_rgb(99_102_241/0.6)]">
+                <div
+                  aria-hidden
+                  className="absolute -right-6 -top-6 h-20 w-20 rounded-full bg-sky-300/30 blur-2xl"
                 />
-                <path
-                  d="M0,95 L25,88 L50,92 L75,75 L100,80 L125,65 L150,68 L175,52 L200,58 L225,42 L250,50 L275,38 L300,44 L325,28 L350,32 L375,20 L400,24 L400,130 L0,130 Z"
-                  fill="url(#gFill)"
-                />
-                <circle cx="375" cy="20" r="3.5" fill="#1E3FE6" />
-                <circle cx="375" cy="20" r="7" fill="#1E3FE6" opacity="0.18" />
-                <line
-                  x1="375"
-                  y1="20"
-                  x2="375"
-                  y2="128"
-                  stroke="#1E3FE6"
-                  strokeOpacity="0.2"
-                  strokeDasharray="2 2"
-                />
-              </svg>
-              <div className="mt-2 flex justify-between font-mono text-[10px] text-ink-soft">
-                <span>Mar</span>
-                <span>Abr</span>
-                <span>May</span>
-                <span>Jun</span>
-                <span>Jul</span>
-                <span>Ago</span>
+                <p className="inline-flex items-center gap-1.5 text-[9px] font-medium uppercase tracking-wider text-indigo-200">
+                  <Sparkles className="h-2.5 w-2.5" />
+                  Próxima clase
+                </p>
+                <h4 className="mt-2 text-base font-semibold leading-tight text-white">
+                  Razonamiento Matemático
+                </h4>
+                <p className="mt-1 text-[10px] leading-snug text-indigo-100/80">
+                  con Hebert Cornejo · UDEP
+                </p>
+                <div className="mt-3 inline-flex items-center gap-2">
+                  <span className="rounded-md bg-indigo-950/30 px-2 py-1 text-[10px] font-medium text-indigo-50 ring-1 ring-indigo-300/20">
+                    06:00 — 08:00 PM
+                  </span>
+                  <button
+                    type="button"
+                    className="inline-flex items-center gap-1 rounded-md bg-white/15 px-2 py-1 text-[10px] font-medium text-white ring-1 ring-white/20 transition-colors hover:bg-white/25"
+                  >
+                    Ir <ArrowRight className="h-2.5 w-2.5" />
+                  </button>
+                </div>
               </div>
             </div>
 
-            <div className="relative rounded-xl border border-[color:var(--line)] p-4 md:col-span-2">
-              <div className="mb-3 flex items-center justify-between">
-                <div className="font-mono text-[11px] uppercase tracking-wider text-ink-soft">
-                  Proctoring · sala 04
+            {/* Mis cursos */}
+            <section className="mt-3">
+              <div className="mb-2 flex items-baseline justify-between">
+                <div>
+                  <h4 className="text-sm font-semibold tracking-tight text-slate-900">
+                    Mis cursos
+                  </h4>
+                  <p className="text-[10px] text-slate-500">
+                    4 cursos este ciclo
+                  </p>
                 </div>
-                <span className="flex items-center gap-1 font-mono text-[10px] text-mint-700">
-                  <span className="pulse-mint h-1.5 w-1.5 rounded-full" />
-                  LIVE
+                <span className="text-[10px] font-medium text-indigo-600">
+                  Ver horario →
                 </span>
               </div>
-              <div className="grid grid-cols-3 gap-1.5">
-                {Array.from({ length: 9 }).map((_, i) => {
-                  const flagged = i === 4;
+
+              <div className="grid grid-cols-2 gap-2 md:grid-cols-4">
+                {courses.map((c) => {
+                  const Icon = c.icon;
                   return (
-                    <div
-                      key={i}
-                      className={`relative aspect-[4/3] overflow-hidden rounded-md border bg-[color:var(--cream)] ${
-                        flagged
-                          ? "border-coral-500"
-                          : "border-[color:var(--line)]"
-                      }`}
+                    <article
+                      key={c.name}
+                      className="group relative overflow-hidden rounded-lg border border-slate-200 bg-white p-2.5"
                     >
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <svg
-                          viewBox="0 0 40 40"
-                          className={`h-6 w-6 ${
-                            flagged
-                              ? "text-coral-600"
-                              : "text-ink-soft opacity-40"
-                          }`}
-                        >
-                          <circle
-                            cx="20"
-                            cy="15"
-                            r="6"
-                            fill="currentColor"
-                            opacity="0.55"
-                          />
-                          <path
-                            d="M8 36 C 8 26 32 26 32 36 Z"
-                            fill="currentColor"
-                            opacity="0.55"
-                          />
-                        </svg>
-                      </div>
-                      {flagged && (
-                        <div className="absolute left-1 top-1 rounded border border-[#FFC8B6] bg-[#FFE9E1] px-1 font-mono text-[8px] text-coral-600">
-                          !FRAUDE
+                      <span
+                        aria-hidden
+                        className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-amber-300 to-amber-500"
+                      />
+                      <div className="flex items-start justify-between gap-1">
+                        <div className="grid h-7 w-7 place-items-center rounded-md bg-gradient-to-br from-amber-300 to-amber-500 text-white">
+                          <Icon className="h-3 w-3" />
                         </div>
-                      )}
-                      <div className="absolute bottom-1 left-1 font-mono text-[7px] text-ink-soft">
-                        A{(i + 1).toString().padStart(2, "0")}
+                        <span className="rounded-full bg-amber-100 px-1.5 py-0.5 text-[7px] font-semibold uppercase tracking-wider text-amber-700">
+                          UDEP · SÁBADOS
+                        </span>
                       </div>
-                    </div>
+                      <h5 className="mt-2 truncate text-[11px] font-semibold text-slate-900">
+                        {c.name}
+                      </h5>
+                      <div className="mt-2 flex items-center justify-between border-t border-slate-200 pt-1.5">
+                        <div className="flex items-center gap-1">
+                          <span className="grid h-3.5 w-3.5 place-items-center rounded-full bg-amber-100 text-[6px] font-semibold text-amber-700">
+                            {c.initials}
+                          </span>
+                          <span className="truncate text-[8px] text-slate-500">
+                            {c.professor}
+                          </span>
+                        </div>
+                        <span className="text-[8px] text-indigo-600">
+                          Ver →
+                        </span>
+                      </div>
+                    </article>
                   );
                 })}
               </div>
-              <div className="mt-3 flex justify-between font-mono text-[10px] text-ink-soft">
-                <span>9 alumnos</span>
-                <span className="text-coral-600">1 alerta</span>
-              </div>
-            </div>
-          </div>
+            </section>
 
-          {/* Bottom row */}
-          <div className="mt-3 grid grid-cols-2 gap-3 md:grid-cols-3">
-            <div className="col-span-2 rounded-xl border border-[color:var(--line)] p-3 md:col-span-2">
-              <div className="mb-2 font-mono text-[11px] uppercase tracking-wider text-ink-soft">
-                Asistencia · semana actual
-              </div>
-              <div className="flex h-16 items-end gap-1.5">
-                {attendance.map((h, i) => (
-                  <div
-                    key={i}
-                    style={{
-                      height: `${h}%`,
-                      animationDelay: `${i * 60}ms`,
-                    }}
-                    className="bar flex-1 rounded-t bg-gradient-to-t from-cobalt-100 to-cobalt-500"
-                  />
-                ))}
-              </div>
-            </div>
-            <div className="hidden rounded-xl border border-[color:var(--line)] bg-[color:var(--cream)] p-3 md:block">
-              <div className="mb-2 font-mono text-[11px] uppercase tracking-wider text-ink-soft">
-                Test vocacional
-              </div>
-              <div className="space-y-2">
-                {vocacional.map(([k, v, c], i) => (
-                  <div key={i}>
-                    <div className="mb-1 flex justify-between font-mono text-[10px] text-ink-soft">
-                      <span>{k}</span>
-                      <span>{v}%</span>
-                    </div>
-                    <div className="h-1.5 overflow-hidden rounded-full border border-[color:var(--line)] bg-white">
-                      <div
-                        className={`h-full ${
-                          c === "cobalt"
-                            ? "bg-cobalt-600"
-                            : c === "coral"
-                              ? "bg-coral-500"
-                              : "bg-sun-500"
-                        }`}
-                        style={{ width: `${v}%` }}
-                      />
-                    </div>
+            {/* Bottom row */}
+            <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
+              {/* Clases de hoy */}
+              <div className="rounded-lg border border-slate-200 bg-white p-3">
+                <div className="mb-2 flex items-center justify-between">
+                  <p className="inline-flex items-center gap-1 text-[10px] font-semibold tracking-tight text-slate-900">
+                    <Calendar className="h-2.5 w-2.5 text-indigo-500" />
+                    Clases de hoy
+                  </p>
+                  <span className="rounded-full bg-indigo-100 px-1.5 py-0.5 text-[8px] font-semibold tabular-nums text-indigo-700">
+                    1
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 rounded-md border border-indigo-200 bg-indigo-50/50 px-3 py-2.5">
+                  <div className="flex flex-col items-center justify-center border-r border-indigo-200 pr-3">
+                    <span className="text-[9px] font-semibold uppercase tracking-wider text-indigo-700">
+                      18:00
+                    </span>
+                    <span className="text-[8px] text-slate-500">— 20:00</span>
                   </div>
-                ))}
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-[10px] font-semibold text-slate-900">
+                      Razonamiento Mat.
+                    </p>
+                    <p className="truncate text-[9px] text-slate-500">
+                      UDEP · Hebert Cornejo
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Asistencia global */}
+              <div className="rounded-lg border border-slate-200 bg-white p-3">
+                <div className="mb-2 flex items-center justify-between">
+                  <p className="inline-flex items-center gap-1 text-[10px] font-semibold tracking-tight text-slate-900">
+                    <PieChart className="h-2.5 w-2.5 text-emerald-500" />
+                    Asistencia global
+                  </p>
+                  <span className="text-[9px] font-medium text-indigo-600">
+                    Detalle →
+                  </span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div>
+                    <span className="bg-gradient-to-br from-indigo-600 to-indigo-800 bg-clip-text text-2xl font-semibold tabular-nums text-transparent">
+                      100%
+                    </span>
+                    <p className="text-[8px] text-slate-500">1 / 1 clases</p>
+                  </div>
+                  <div className="grid flex-1 grid-cols-3 gap-1 text-center">
+                    <Tally label="Pres." value={1} tone="emerald" />
+                    <Tally label="Tard." value={0} tone="amber" />
+                    <Tally label="Ausen." value={0} tone="rose" />
+                  </div>
+                </div>
+                <div className="mt-2 h-1 w-full rounded-full bg-slate-100">
+                  <div className="h-full w-full rounded-full bg-gradient-to-r from-emerald-400 to-indigo-500" />
+                </div>
               </div>
             </div>
-          </div>
-        </main>
+          </main>
+        </div>
       </div>
+    </div>
+  );
+}
+
+function StatPill({
+  label,
+  value,
+  tone,
+  icon: Icon,
+}: {
+  label: string;
+  value: string;
+  tone: "indigo" | "sky" | "emerald";
+  icon: LucideIcon;
+}) {
+  const styles = {
+    indigo: "from-indigo-100/90 to-indigo-50/60 border-indigo-200",
+    sky: "from-sky-100/90 to-sky-50/60 border-sky-200",
+    emerald: "from-emerald-100/90 to-emerald-50/60 border-emerald-200",
+  }[tone];
+  return (
+    <div className={`rounded-lg border bg-gradient-to-br ${styles} px-2.5 py-2`}>
+      <div className="flex items-center gap-1 text-[8px] font-semibold uppercase tracking-wider text-slate-500">
+        <Icon className="h-2.5 w-2.5" />
+        {label}
+      </div>
+      <div className="mt-0.5 text-lg font-semibold tabular-nums text-slate-900">
+        {value}
+      </div>
+    </div>
+  );
+}
+
+function Tally({
+  label,
+  value,
+  tone,
+}: {
+  label: string;
+  value: number;
+  tone: "emerald" | "amber" | "rose";
+}) {
+  const bg = {
+    emerald: "bg-emerald-100/70 text-emerald-700",
+    amber: "bg-amber-100/70 text-amber-700",
+    rose: "bg-rose-100/70 text-rose-700",
+  }[tone];
+  return (
+    <div className={`rounded-md ${bg} px-1.5 py-1.5`}>
+      <div className="text-[7px] font-semibold uppercase tracking-wider opacity-70">
+        {label}
+      </div>
+      <div className="text-sm font-semibold tabular-nums">{value}</div>
     </div>
   );
 }

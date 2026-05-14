@@ -3,6 +3,7 @@
 import { ArrowRight, PlayCircle } from "lucide-react";
 import { Reveal } from "@/components/animated/reveal";
 import { NumberTicker } from "@/components/animated/number-ticker";
+import { Tilt3D } from "@/components/animated/tilt-3d";
 import { DashboardMockup } from "@/components/sections/dashboard-mockup";
 
 const stats = [
@@ -154,7 +155,9 @@ export function Hero() {
         {/* Dashboard */}
         <Reveal delay={300} className="relative mt-16 md:mt-20">
           <div className="pointer-events-none absolute -inset-x-10 -inset-y-6 -z-10 rounded-[40px] bg-gradient-to-br from-[color:var(--cobalt-50)] via-transparent to-[#FFEFE9] opacity-70" />
-          <DashboardMockup />
+          <Tilt3D className="mx-auto max-w-[1120px]">
+            <DashboardMockup />
+          </Tilt3D>
         </Reveal>
 
         {/* Trust strip */}
