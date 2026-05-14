@@ -75,12 +75,6 @@ export function Nav() {
 
           <div className="flex items-center gap-2">
             <a
-              href="/demo"
-              className="hidden px-3 py-1.5 text-[13px] text-ink-soft transition hover:text-ink md:inline-flex"
-            >
-              Iniciar sesión
-            </a>
-            <a
               href="#cta"
               className="btn-primary inline-flex items-center gap-1.5 rounded-lg px-3.5 py-1.5 text-[13px] font-medium"
             >
