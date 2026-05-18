@@ -45,5 +45,5 @@
 
   <!-- Footer meta -->
   <text x="80" y="585" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="#4B5168" letter-spacing="2.4">PROCTORING IA · VOCACIONAL ML · 12 MÓDULOS</text>
-  <text x="1120" y="585" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="#4B5168" letter-spacing="2.4" text-anchor="end">KLASSIA.PE</text>
+  <text x="1120" y="585" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="#4B5168" letter-spacing="2.4" text-anchor="end">KLASSIA.LAT</text>
 </svg>

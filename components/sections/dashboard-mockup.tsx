@@ -67,7 +67,7 @@ export function DashboardMockup() {
           </div>
           <div className="ml-3 flex items-center gap-1.5 rounded-md border border-slate-200 bg-white px-2.5 py-1 text-[10px] text-slate-500">
             <span className="h-1.5 w-1.5 rounded-full bg-indigo-400" />
-            intranet.andinos-piura.klassia.pe
+            intranet.andinos-piura.klassia.lat
           </div>
         </div>
 

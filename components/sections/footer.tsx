@@ -93,7 +93,7 @@ export function Footer() {
                 Contacto
               </div>
               <ul className="space-y-2 text-[13px] text-white/75">
-                <li>hola@klassia.pe</li>
+                <li>hola@klassia.lat</li>
                 <li>Piura · Perú</li>
                 <li>Hecho en casa, con manos peruanas</li>
                 <li className="flex items-center gap-1.5 text-mint-500">

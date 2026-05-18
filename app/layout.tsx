@@ -26,7 +26,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://klassia.pe"),
+  metadataBase: new URL("https://klassia.lat"),
   title: {
     default: "Klassia — El sistema operativo para las academias del futuro",
     template: "%s · Klassia",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_PE",
-    url: "https://klassia.pe",
+    url: "https://klassia.lat",
     siteName: "Klassia",
     title: "Klassia — El sistema operativo para las academias del futuro",
     description:
@@ -98,8 +98,8 @@ const jsonLd = {
     {
       "@type": "Organization",
       name: "Klassia",
-      url: "https://klassia.pe",
-      logo: "https://klassia.pe/favicon.svg",
+      url: "https://klassia.lat",
+      logo: "https://klassia.lat/favicon.svg",
       description:
         "Plataforma educativa con IA hecha en Piura, Perú para academias, colegios e institutos.",
       address: {

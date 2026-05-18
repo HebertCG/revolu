@@ -239,7 +239,7 @@ function VLink() {
     <div>
       <div className="mb-3 flex items-center justify-between rounded-lg border border-[color:var(--line-strong)] bg-white px-3 py-2.5 font-mono text-[11px]">
         <span className="truncate text-ink-soft">
-          klassia.io/
+          klassia.lat/
           <span className="font-semibold text-cobalt-700">a/helios/3b</span>
         </span>
         <LinkIcon className="h-3.5 w-3.5 shrink-0 text-ink-soft" />
@@ -490,7 +490,7 @@ function VSeo() {
           <span className="h-2 w-2 rounded-full bg-coral-500" />
           <span className="h-2 w-2 rounded-full bg-sun-500" />
           <span className="ml-auto font-mono text-[10px] text-ink-soft">
-            helios.klassia.io
+            helios.klassia.lat
           </span>
         </div>
         <div className="p-3">
